@@ -1,0 +1,9 @@
+{"_id":{"$oid":"5755ddc39348dc1bd836bc5c"},"nombre":"hijo"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc5d"},"nombre":"hija"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc5e"},"nombre":"esposo"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc5f"},"nombre":"esposa"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc60"},"nombre":"suegro"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc61"},"nombre":"suegra"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc62"},"nombre":"padre"}
+{"_id":{"$oid":"5755ddc39348dc1bd836bc63"},"nombre":"madre"}
+{"_id":{"$oid":"575a95be9348dc1bd836bc6a"},"nombre":"otro"}

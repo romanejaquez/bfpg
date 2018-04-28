@@ -1,0 +1,3 @@
+{"_id":{"$oid":"5755da299348dc1bd836bc59"},"nombre":"Basica","cantidadAPagar":40.0}
+{"_id":{"$oid":"5755da299348dc1bd836bc5a"},"nombre":"Mediana","cantidadAPagar":60.0}
+{"_id":{"$oid":"5755da299348dc1bd836bc5b"},"nombre":"Premium","cantidadAPagar":100.0}

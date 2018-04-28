@@ -1,0 +1,3 @@
+{"_id":{"$oid":"575b06149348dc1bd836bc6e"},"created":{"$date":"2016-06-10T18:25:24.613Z"},"message":"Eso es solo una prueba para ver como se envia la informacion","createdBy":{"$oid":"575ad40dc874f8912c95f6fe"}}
+{"_id":{"$oid":"575b07609348dc1bd836bc6f"},"created":{"$date":"2016-06-10T18:30:56.640Z"},"message":"Recordatorio de llamar a los clientes que deben en este mes.","createdBy":{"$oid":"575ad40dc874f8912c95f6fe"}}
+{"_id":{"$oid":"575b07849348dc1bd836bc70"},"created":{"$date":"2016-06-10T18:31:32.063Z"},"message":"Mandar fax al afiliado Ramon Casado para que firme los documentos.","createdBy":{"$oid":"575ad40dc874f8912c95f6fe"}}
