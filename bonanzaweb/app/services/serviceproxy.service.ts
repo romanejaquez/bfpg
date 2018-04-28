@@ -35,7 +35,7 @@ export class ServiceProxy {
     LocalSettings = { RememberUser: false, Username: '' };
     Metadata:any;
     
-    private baseUrl = 'http://45.55.133.28:5000/api/'; //'http://localhost:5000/api/'; // 
+    private baseUrl = 'http://localhost:5000/api/'; //'http://45.55.133.28:5000/api/'; // 
     private headers = new Headers({ 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
     private jwtToken = '';
     private options = new RequestOptions({ headers: this.headers });
