@@ -1,0 +1,138 @@
+@import 'colors.less';
+
+.sideNavWrapper {
+    background: @blueGray;
+    width: 280px;
+    height: 100%;
+}
+
+.sideNavWrapper > nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sideNavTop {
+    margin-top: 50px;
+}
+
+.sideNavBottom {
+    margin-bottom: 20px;
+}
+
+.sideNavItemWrapper {
+    padding: 15px 20px 15px 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.sideNavItemWrapper.selected, .sideNavItemWrapper.selected:hover {
+    background: @darkBlueGray;
+}
+
+ .sideNavItemWrapper:hover {
+     background: @semiDarkBlueGray;
+ }
+
+.sideNavItemWrapper.selected .sideNavItemIcon {
+    color: @iconGreen;
+}
+
+.sideNavItemWrapper.selected .sideNavTab {
+    display: block;
+}
+
+.sideNavItemIcon {
+    color: @iconGray;
+    font-size: 20px;
+}
+
+.sideNavExpandedIcon {
+    display: inline-block;
+}
+
+.sideNavCollapsedIcon {
+    display: none;
+}
+
+.sideNavItemLabel {
+    color: @iconGray;
+    margin-left: 20px;
+    display: block;
+}
+
+.sideNavTab {
+    width: 5px;
+    background: @iconGreen;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.sideNavBadge {
+    position: absolute;
+    right: 0;
+    top: 9px;
+    margin-right: 20px;
+    color: @iconGreen;
+    border: 1px solid @iconGreen;
+    padding: 5px;
+    min-width: 32px;
+    border-radius: 50%;
+    text-align: center;
+    display: none; /* hide for now */
+}
+
+.sideNavTop > header, .sideNavBottom > header {
+    color: @lightGray2;
+    opacity: 0.5;
+    font-size: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sideNavSeparator {
+    height: 1px;
+    background: @lightGray;
+    opacity: 0.2;
+    margin: 30px;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+    
+    .sideNavWrapper {
+        width: 60px;
+    }
+    
+    .sideNavTop > header, .sideNavBottom > header {
+        display: none;
+    }
+    
+    .sideNavCollapsedIcon {
+        display: block;
+    }
+    
+    .sideNavItemLabel, .sideNavExpandedIcon {
+        display: none;
+    }
+    
+    .sideNavItemWrapper {
+        padding: 15px 20px 15px 17px;
+    }
+    
+    .sideNavItemIcon {
+        font-size: 25px;
+    }
+    
+    .sideNavTop {
+        margin-top: 0px;
+    }
+}

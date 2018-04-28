@@ -1,0 +1,90 @@
+@import 'colors.less';
+
+.clientDetailsPage .pageToolbar {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.clientDetailsMainSection {
+    
+}
+
+.clientDetailsSection {
+    margin-bottom: 10px;
+}
+
+.clientDetailsSectionHeaderExpander {
+    margin-right: 10px;
+}
+
+.clientDetailsSectionHeader {
+    color: gray;
+    font-weight: bold;
+    background: #ECECEC;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.clientDetailsSectionContent {
+    padding: 15px;
+}
+
+.clientDetailsSectionRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid @lightGray;
+}
+
+.clientDetailsSectionCell {
+    flex: 1;
+}
+
+.clientDetailsSectionCellHeader {
+    color: @lightBlue;   
+}
+
+.clientDetailsSectionCellContent {
+    color: @gray;
+    font-size: 18px;
+    max-width: 350px;
+    padding-right: 30px;
+}
+
+.clientDetailsSectionContentHeader {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clientDetailsListBtns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.clientDetailsListBtn {
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .clientDetailsSectionRow {
+        flex-direction: column;
+    }
+    
+    .clientDetailsSectionCell {
+        margin-bottom: 30px;
+    }
+    
+    .clientDetailsPage .pageToolbar {
+        display: none;
+    }
+}

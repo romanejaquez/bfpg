@@ -1,0 +1,286 @@
+[{
+    "creado": new Date(),
+    "ultimoAcceso": new Date(),
+    "afiliadoPrimario": {
+        "nombre": "Roman Ernesto",
+        "apellido": "Jaquez Reynoso",
+        "apodo": "Temetito",
+        "fechaDeNacimiento": new Date(),
+        "miembroDesde": new Date(),
+        "cedula": "048-569569-555",
+        "direccion": {
+            "calle":"Avenida Luperon, Ensanche los Prados",
+            "provincia": "Monsenor Nouel",
+            "municipio": "Bonao",
+            "referenciaLugar": "al frente de un colmado"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "romanejaquez@gmail.com"
+    },
+    "afiliadoSecundario": {
+        "nombre": "Dorcaly Jissel",
+        "apellido": "Fiallo Rosario",
+        "apodo": "Jissel",
+        "fechaDeNacimiento": new Date(),
+        "cedula": "048-569569-333",
+        "direccion": {
+            "calle":"Avenida Las Carreras, Edificio P46 apt 4A",
+            "provincia": "Santiago",
+            "municipio": "Santiago",
+            "referenciaLugar": "al frente de una banca"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "dorcalyf@gmail.com"
+    },
+    "cuenta": {
+        "tipo":"5755da299348dc1bd836bc59",
+        "estado": "Activa",
+        "frequenciaDePago": "5755d9ec9348dc1bd836bc57"
+    },
+    "familiaresBeneficiados": [
+        {
+            "nombre": "Ernesto Dariel",
+            "apellido": "Jaquez Fiallo",
+            "apodo": "Tito",
+            "fechaDeNacimiento": new Date(),
+            "parentesco": "5755ddc39348dc1bd836bc5c",
+            "actaDeNacimiento": "048-569569-789",
+            "direccion": {
+                "igualDeAfiliado": true
+            },
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "ernestodariel@gmail.com"
+        }
+    ],
+    "actividadDePago": {
+        "pagosPorHacer": [
+            {
+                "fecha": new Date(),
+                "totalAPagar": 50,
+                "cantidadPaga": 30,
+                "cantidadPorPagar": 20,
+                "nota": "Se pago a tiempo"
+            }
+        ]
+    },
+    "notas": [
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+    ]
+},
+{
+    "creado": new Date(),
+    "ultimoAcceso": new Date(),
+    "afiliadoPrimario": {
+        "nombre": "Jose Francisco",
+        "apellido": "Perez Castellanos",
+        "apodo": "Pololo",
+        "fechaDeNacimiento": new Date(),
+        "miembroDesde": new Date(),
+        "cedula": "048-569569-550",
+        "direccion": {
+            "calle":"Avenida Dr Columna Esquina Los Santos",
+            "provincia": "Monsenor Nouel",
+            "municipio": "Bonao",
+            "referenciaLugar": "al frente del liceo"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "jfcperez@gmail.com"
+    },
+    "afiliadoSecundario": {
+        "nombre": "Luisa Maria",
+        "apellido": "Rosario de Perez",
+        "apodo": "Luisa",
+        "fechaDeNacimiento": new Date(),
+        "cedula": "048-569569-331",
+        "direccion": {
+            "calle":"Avenida Las Carreras, Edificio P46 apt 4A",
+            "provincia": "Santiago",
+            "municipio": "Santiago",
+            "referenciaLugar": "al frente de una banca"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "dorcalyf@gmail.com"
+    },
+    "cuenta": {
+        "tipo":"5755da299348dc1bd836bc59",
+        "estado": "Activa",
+        "frequenciaDePago": "5755d9ec9348dc1bd836bc57"
+    },
+    "familiaresBeneficiados": [
+        {
+            "nombre": "Carlos Antonio",
+            "apellido": "Perez Rosario",
+            "apodo": "Tony",
+            "fechaDeNacimiento": new Date(),
+            "parentesco": "5755ddc39348dc1bd836bc5c",
+            "actaDeNacimiento": "048-569569-789",
+            "direccion": {
+                "igualDeAfiliado": true
+            },
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "tony@gmail.com"
+        },
+        {
+            "nombre": "Luisa Herminia",
+            "apellido": "Perez Rosario",
+            "apodo": "Lola",
+            "fechaDeNacimiento": new Date(),
+            "parentesco": "5755ddc39348dc1bd836bc5d",
+            "actaDeNacimiento": "048-569569-789",
+            "direccion": {
+                "igualDeAfiliado": true
+            },
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "luisita@gmail.com"
+        }
+    ],
+    "actividadDePago": {
+        "pagosPorHacer": [
+            {
+                "fecha": new Date(),
+                "totalAPagar": 50,
+                "cantidadPaga": 30,
+                "cantidadPorPagar": 20,
+                "nota": "Abono una parte solamente"
+            }
+        ]
+    },
+    "notas": [
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+    ]
+},
+{
+    "creado": new Date(),
+    "ultimoAcceso": new Date(),
+    "afiliadoPrimario": {
+        "nombre": "Roberto Angel",
+        "apellido": "Salcedo Ramirez",
+        "apodo": "Robertico",
+        "fechaDeNacimiento": new Date(),
+        "miembroDesde": new Date(),
+        "cedula": "048-569569-553",
+        "direccion": {
+            "calle":"Calle San Antonio 345",
+            "provincia": "Monsenor Nouel",
+            "municipio": "Bonao",
+            "referenciaLugar": "detras de la reforma"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "robertico@gmail.com"
+    },
+    "afiliadoSecundario": {
+        "nombre": "Elba Teresa",
+        "apellido": "Rodriguez de Salcedo",
+        "apodo": "Elba",
+        "fechaDeNacimiento": new Date(),
+        "cedula": "048-569569-334",
+        "direccion": {
+            "calle":"Residencial El Progreso Piso 3 Apt 4",
+            "provincia": "Santiago",
+            "municipio": "Santiago",
+            "referenciaLugar": ""
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "elba@gmail.com"
+    },
+    "cuenta": {
+        "tipo":"5755da299348dc1bd836bc5b",
+        "estado": "Activa",
+        "frequenciaDePago": "5755d9ec9348dc1bd836bc58"
+    },
+    "familiaresBeneficiados": [
+        {
+            "nombre": "Mia Carla",
+            "apellido": "Salcedo Rodriguez",
+            "apodo": "Mia",
+            "fechaDeNacimiento": new Date(),
+            "parentesco": "5755ddc39348dc1bd836bc5d",
+            "actaDeNacimiento": "048-569569-789",
+            "direccion": {
+                "igualDeAfiliado": true
+            },
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "mia@gmail.com"
+        }
+    ],
+    "actividadDePago": {
+        "pagosPorHacer": [
+            {
+                "fecha": new Date(),
+                "totalAPagar": 100,
+                "cantidadPaga": 30,
+                "cantidadPorPagar": 70,
+                "nota": "Abono una parte"
+            }
+        ]
+    },
+    "notas": [
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": new Date(),
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+    ]
+}]
+

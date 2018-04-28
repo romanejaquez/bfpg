@@ -1,0 +1,115 @@
+<div class="pageContainer makePaymentPage">
+    <header>
+        <span class="headerIcon icon icon-dollar"></span><span class="paymentParentLink" (click)="backToParent()">Pagos por hacer</span><span class="breadCrumbDivider">/</span><span>Hacer Pago</span>
+    </header>
+    <div class="pageContentMain">
+        <div class="makePaymentHeader">
+            <div class="makePaymentHeaderLeft">
+                <div class="makePaymentClientLabel">Afiliado</div>
+                <div class="makePaymentClientName">{{ Client?.afiliadoPrimario?.apellido }}, {{ Client?.afiliadoPrimario?.nombre }}</div>
+                <div class="makePaymentFrequency">Frequencia de Pago: <span class="makePaymentFrequencyLabel">{{ Client?.cuenta?.frecuenciaDePago | metadata: 'frecuencia' }}</span></div>
+            </div>
+            <div class="makePaymentHeaderRight">
+                <div class="makePaymentClientLabel">Cuenta No.</div>
+                <div class="makePaymentClientId">{{ Client?._id }}</div>
+                <div class="makePaymentCedulaLabel">Cedula No. <b>{{ Client?.afiliadoPrimario?.cedula }}</b></div>
+            </div>
+        </div>
+        <div class="makePaymentHistoryLastPayment" *ngIf="HistorialDePago.length > 0">
+            <div>
+                Ultimo pago efectuado: <span class="makePaymentHistoryDate">{{ convertDate(HistorialDePago[0].fechaDePago) | date: 'shortDate'}}</span>
+                Ciclo: <span class="makePaymentHistoryDate">{{ convertDate(HistorialDePago[0].fechaDeCiclo) | date: 'shortDate'}}</span> Cantidad: 
+                <span class="makePaymentHistoryDate">RD${{ HistorialDePago[0].cantidadPaga | number: '2.2' }}</span>
+            </div>
+            <div>
+                <button (click)="onViewHistorialDePago()" class="appLinkBtn btn btn-link btn-sm"><span class="appLinkBtnIcon icon icon-dollar"></span> Ver Historial De Pago</button>
+            </div>
+        </div>
+        <div class="makePaymentTopSection" *ngIf="Client?.actividadDePago?.pagosPorHacer?.length > 0">
+            <div class="makePaymentRadio radio">
+                <input type="radio" id="selectPaymentRadio" name="selectPaymentRadio" checked (change)="onSelectPaymentType(0)">
+                <label class="radioOuterLabel" for="selectPaymentRadio"><span class="radioInnerLabel">Seleccionar Pago a realizar:</span></label>
+            </div>
+            <table *ngIf="PaymentSelection.SelectAmountToPay" class="table table-striped table-hover table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Fecha de Ciclo</th>
+                        <th>Cantidad Paga</th>
+                        <th>Cantidad Por Pagar</th>
+                        <th>No. de Transación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let pagoPorHacer of Client?.actividadDePago?.pagosPorHacer; let i = index;"> 
+                        <td>
+                            <div class="makePaymentCheckbox checkbox">
+                                <input type="checkbox" #amntCkb id="amntCkb{{ i }}" (change)="onPaymentRowChecked(amntCkb.checked, pagoPorHacer)">
+                                <label class="makePaymentCheckboxLabel" [attr.for]="'amntCkb'+i"></label>
+                            </div>
+                        </td>
+                        <td>{{ convertDate(pagoPorHacer.fechaDeCiclo) | date: 'shortDate' }}</td>
+                        <td>RD${{ pagoPorHacer.cantidadPaga | number: '1.2' }}</td>
+                        <td>RD${{ pagoPorHacer.cantidadPorPagar | number: '1.2' }}</td>
+                        <td>{{ pagoPorHacer.transactionId }}</td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="makePaymentBottomSection" *ngIf="AbonoPayment">
+            <div class="makePaymentRadio radio">
+                <input type="radio" #anotherAmountRadio id="anotherAmountRadio" name="selectPaymentRadio" (change)="onSelectPaymentType(1)">
+                <label class="radioOuterLabel" for="anotherAmountRadio"><span class="radioInnerLabel">Pagar otra cantidad:</span></label>
+            </div>
+            <div class="makePaymentAnotherAmountPanel" *ngIf="PaymentSelection.OtherAmountToPay">
+                <span>Abonar RD$ </span><input type="number" min="0" max="AbonoPayment.cantidadPorPagar" ng-maxlength="5" [(ngModel)]="TotalPaymentAmount"/> <span>al mes de</span>
+                <span>{{ convertDate(AbonoPayment.fechaDeCiclo) | date: 'shortDate'}} - RD${{ AbonoPayment.cantidadPorPagar | number: '1.2'}}</span>
+            </div>
+        </div>
+        <div class="makePaymentBottomSection" [hidden]="Client?.actividadDePago?.pagosPorHacer?.length > 0">
+            <div class="makePaymentRadio radio">
+                    <input type="radio" id="paymentAheadRadio" name="selectPaymentRadio" (change)="onSelectPaymentType(2)">
+                    <label class="radioOuterLabel" for="paymentAheadRadio"><span class="radioInnerLabel">Pagar por adelantado:</span></label>
+                </div>
+            <div class="makePaymentInnerSection" *ngIf="PaymentSelection.AdvancedPay">
+                <div class="makePaymentSectionHeader">
+                    <button (click)="addAdvancedPayment()" class="addPaymentAheadBtn appLinkBtn btn btn-link btn-sm"><span class="appLinkBtnIcon icon icon-plus"></span> Anadir Pago Adelantado</button>
+                </div>
+                <br/>
+                <table *ngIf="Payments.pagos.length > 0" class="table table-striped table-hover table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Fecha de Pago</th>
+                            <th>Fecha de Ciclo</th>
+                            <th>Cantidad</th>
+                            <th>Frequencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let pago of Payments.pagos">
+                            <td>{{ pago.fechaDePago | date:'shortDate' }}</td>
+                            <td>{{ pago.fechaDeCiclo | date:'shortDate' }}</td>
+                            <td>RD${{ pago.cantidadPaga | number:'2.2' }}</td>
+                            <td><span class="makePaymentFrequencyLabel">{{ pago.frecuenciaDePago | metadata: 'frecuencia' }}</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="paymentsTotalRegion">
+            <div class="paymentsTotal">
+                <div class="paymentsTotalLabel">Total a pagar:</div>
+                <div class="paymentsTotalAmount">RD${{ TotalPaymentAmount | number:'1.2' }}</div>
+            </div>
+        </div>
+        <div class="makePaymentBtnRegion">
+            <button (click)="submitPayment()" [disabled]="enableMakePaymentBtn()" class="makePaymentBtn appSuccessBtn btn btn-success"><span class="appBtnIcon icon icon-dollar"></span>&nbsp;HACER PAGO</button>
+        </div>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

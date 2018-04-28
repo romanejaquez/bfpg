@@ -1,0 +1,115 @@
+@import 'colors.less';
+
+.clientsPage .pageToolbar {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 0;
+}
+
+.clientsPage .pageToolbarRight {
+    display: flex;
+}
+
+.clientsPage .pageFooterbar {
+    display: flex;
+    justify-content: center;
+}
+
+.searchTextField {
+    padding: 5px;
+    width: 250px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid @lightGray;
+    color: @lightBlue;
+    margin-right: 10px;
+}
+
+.clientColumnHide {
+    display: block;
+}
+
+tr.clientRow {
+    cursor: pointer !important;
+}
+
+.clientNotFoundMsg {
+    padding: 10px;
+    color: @gray;
+}
+
+.clientDetailsHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @lightGray;
+    padding-bottom: 20px;
+}
+
+.clientDetailsPage .pageContentMain {
+    padding: 20px;
+}
+
+.clientDetailsHeaderLeft {
+    flex: 1;
+}
+
+.clientDetailsHeaderRight {
+    flex: 1;
+    text-align: right;
+}
+
+.clientDetailsClientLabel {
+    color: @lightBlue;
+}
+
+.clientDetailsClientName, .clientDetailsClientId {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.clientDetailsCedulaLabel {
+    color: @gray;
+}
+
+.clientDetailsFrequencyLabel {
+    color: @appMainGreen;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .clientsPage .pageToolbar {
+        justify-content: center;
+    }
+    
+    .clientsPage .pageToolbarRight {
+        flex-direction: column;
+    }
+    
+    .clientsPage .addClientBtn {
+        display: none !important;
+    }
+    
+    .clientsPage .searchTextField {
+        width: 300px;
+        margin-right: 0;
+    }
+    
+    .clientColumnHide {
+        display: none;
+    }
+    
+    .clientDetailsHeader {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .clientDetailsHeaderRight {
+        text-align: center;
+        margin-top: 30px;
+    }
+}

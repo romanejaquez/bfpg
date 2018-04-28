@@ -1,0 +1,110 @@
+@import 'colors.less';
+
+.pageContainer > header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: @lightBlue;
+    margin-bottom: 20px;
+}
+
+.paymentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid @lightGray;
+    cursor: pointer;
+}
+
+.paymentRow:last-child {
+    border-bottom: none;
+}
+
+.paymentRow:hover {
+    background: @hoverGray;
+}
+
+.paymentRowLeft {
+    flex: 2;
+}
+
+.paymentRowRight {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.paymentRowClientName {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.paymentRowClientId {
+    color: @lightBlue;
+    font-size: 12px;
+}
+
+.paymentRowAccountType {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.paymentRowAccountTypeLabel {
+    color: @appMainGreen;
+}
+
+.paymentRowSmallLabel {
+    font-size: 12px;
+    color: @gray;
+}
+
+.appLinkBtn {
+    color: @lightBlue !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    border: 1px solid @lightBlue !important;
+    text-decoration: none !important;
+}
+
+.appLinkBtn:link, .appLinkBtn:visited, .appLinkBtn:hover, .appLinkBtn:active {
+    background: @lightBlue !important;
+    color: @white !important;
+    text-decoration: none !important;
+}
+
+.appLinkBtnIcon {
+    margin-right: 5px;
+}
+
+.pageContentColumns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.pageContentRight {
+    text-align: right;
+}
+
+.pageContentLeft {
+    flex: 1;
+    padding-right: 100px;
+}
+
+.appInfoBtn, .appSuccessBtn {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.appBtnIcon {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.noContentMessageLabel {
+    color: @noContentGray;
+    margin-left: 20px;
+}

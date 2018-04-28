@@ -1,0 +1,1118 @@
+[
+    {
+        "provincia": "Distrito Nacional",
+        "municipios": [
+            {
+                "nombre":"Distrito Nacional",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Azua",
+        "municipios": [
+            {
+                "nombre":"Azua de Compostela",
+                "distritosMunicipales": [
+                    "Barreras",
+                    "Barro Arriba",
+                    "Clavellina",
+                    "Emma Balaguer Viuda Vallejo",
+                    "Las Barías-La Estancia",
+                    "Las Lomas",
+                    "Los Jovillos",
+                    "Puerto Viejo"
+                ]
+            },
+            {
+                "nombre":"Estebanía",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Guayabal",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Las Charcas",
+                "distritosMunicipales": [
+                    "Hatillo",
+                    "Palmar de Ocoa"
+                ]
+            },
+            {
+                "nombre":"Las Yayas de Viajama",
+                "distritosMunicipales": [
+                    "Villarpando",
+                    "Hato Nuevo-Cortés"
+                ]
+            },
+            {
+                "nombre":"Padre Las Casas",
+                "distritosMunicipales": [
+                    "La Siembra",
+                    "Las Lagunas",
+                    "Los Fríos"
+                ]
+            },
+            {
+                "nombre":"Peralta",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Pueblo Viejo",
+                "distritosMunicipales": [
+                    "El Rosario"
+                ]
+            },
+            {
+                "nombre":"Sabana Yegua",
+                "distritosMunicipales": [
+                    "Proyecto 4",
+                    "Ganadero",
+                    "Proyecto 2-C"
+                ]
+            },
+            {
+                "nombre":"Tábara Arriba",
+                "distritosMunicipales": [
+                    "Amiama Gómez",
+                    "Los Toros",
+                    "Tábara Abajo"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Baoruco",
+        "municipios": [
+            {
+                "nombre":"Neiba",
+                "distritosMunicipales": [
+                    "El Palmar"
+                ]
+            },
+            {
+                "nombre":"Galván",
+                "distritosMunicipales": [
+                    "El Salado"
+                ]
+            },
+            {
+                "nombre":"Los Ríos",
+                "distritosMunicipales": [
+                    "Las Clavellinas"
+                ]
+            },
+            {
+                "nombre":"Tamayo",
+                "distritosMunicipales": [
+                    "Cabeza de Toro",
+                    "Mena",
+                    "Monserrat",
+                    "Santa Bárbara-El 6",
+                    "Santana",
+                    "Uvilla"
+                ]
+            },
+            {
+                "nombre":"Villa Jaragua",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Barahona",
+        "municipios": [
+            {
+                "nombre":"Barahona",
+                "distritosMunicipales": [
+                    "El Cachón",
+                    "La Guázara",
+                    "Villa Central"
+                ]
+            },
+            {
+                "nombre":"Cabral",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"El Peñón",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Enriquillo",
+                "distritosMunicipales": [
+                    "Arroyo Dulce"
+                ]
+            },
+            {
+                "nombre":"Fundación",
+                "distritosMunicipales": [
+                    "Pescadería"
+                ]
+            },
+            {
+                "nombre":"Jaquimeyes",
+                "distritosMunicipales": [
+                    "Palo Alto"
+                ]
+            },
+            {
+                "nombre":"La Ciénaga",
+                "distritosMunicipales": [
+                    "Bahoruco"
+                ]
+            },
+            {
+                "nombre":"Las Salinas",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Paraiso",
+                "distritosMunicipales": [
+                    "Los Patos"
+                ]
+            },
+            {
+                "nombre":"Polo",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Vicente Noble",
+                "distritosMunicipales": [
+                    "Canoa",
+                    "Fondo Negro",
+                    "Quita Coraza"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Dajabón",
+        "municipios": [
+            {
+                "nombre":"Barahona",
+                "distritosMunicipales": [
+                    "Cañongo"
+                ]
+            },
+            {
+                "nombre":"El Pino",
+                "distritosMunicipales": [
+                    "Manuel Bueno"
+                ]
+            },
+            {
+                "nombre":"Loma de Cabrera",
+                "distritosMunicipales": [
+                    "Capotillo",
+                    "Santiago de la Cruz"
+                ]
+            },
+            {
+                "nombre":"Partido",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Restauracion",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Duarte",
+        "municipios": [
+            {
+                "nombre":"San Fco. de Macorís",
+                "distritosMunicipales": [
+                    "Cenoví",
+                    "Jaya",
+                    "La Peña",
+                    "Pte. Don Antonio Guzmán Fdez."
+                ]
+            },
+            {
+                "nombre":"Arenoso",
+                "distritosMunicipales": [
+                    "Aguacate",
+                    "Las Coles"
+                ]
+            },
+            {
+                "nombre":"Castillo",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Eugenio Ma. de Hostos",
+                "distritosMunicipales": [
+                    "Sabana Grande"
+                ]
+            },
+            {
+                "nombre":"Las Guáranas",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Pimentel",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Villa Riva",
+                "distritosMunicipales": [
+                    "Agua Santa del Yuna",
+                    "Barraquito",
+                    "Cristo Rey de Guaraguao",
+                    "Las Táranas"
+                ]
+            }
+        ]
+    }
+]
+[
+    {
+        "provincia": "El Seibo",
+        "municipios": [
+            {
+                "nombre":"El Seibo",
+                "distritosMunicipales": [
+                    "Pedro Sánchez",
+                    "San Francisco-Vicentillo",
+                    "Santa Lucía"
+                ]
+            },
+            {
+                "nombre":"Miches",
+                "distritosMunicipales": [
+                    "El Cedro",
+                    "La Gina"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Elías Piña",
+        "municipios": [
+            {
+                "nombre":"Comendador",
+                "distritosMunicipales": [
+                    "Guayabo",
+                    "Sabana Larga"
+                ]
+            },
+            {
+                "nombre":"Bánica",
+                "distritosMunicipales": [
+                    "Sabana Cruz",
+                    "Sabana Higüero"
+                ]
+            },
+            {
+                "nombre":"El Llano",
+                "distritosMunicipales": [
+                    "Guanito"
+                ]
+            },
+            {
+                "nombre":"Hondo Valle",
+                "distritosMunicipales": [
+                    "Rancho de la Guardia"
+                ]
+            },
+            {
+                "nombre":"Juan Santiago",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Pedro Santana",
+                "distritosMunicipales": [
+                    "Río Limpio"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Espaillat",
+        "municipios": [
+            {
+                "nombre":"Moca",
+                "distritosMunicipales": [
+                    "Canca La Reina",
+                    "El Higüerito",
+                    "José Contreras",
+                    "Juan López",
+                    "La Ortega",
+                    "Las Lagunas",
+                    "Monte de la Jagua",
+                    "San Víctor"
+                ]
+            },
+            {
+                "nombre":"Cayetano Germosén",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Gaspare Hernández",
+                "distritosMunicipales": [
+                    "Joba Arriba",
+                    "Veragua",
+                    "Villa Magante"
+                ]
+            },
+            {
+                "nombre":"Jamao al Norte",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Hato Mayor",
+        "municipios": [
+            {
+                "nombre":"Hato Mayor del Rey",
+                "distritosMunicipales": [
+                    "Guayabo Dulce",
+                    "Mata Palacio",
+                    "Yerba Buena"
+                ]
+            },
+            {
+                "nombre":"El Valle",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Sabana de la Mar",
+                "distritosMunicipales": [
+                    "Elupina Cordero de Las Cañitas"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Hermanas Mirabal",
+        "municipios": [
+            {
+                "nombre":"Salcedo",
+                "distritosMunicipales": [
+                    "Jamao Afuera"
+                ]
+            },
+            {
+                "nombre":"Tenares",
+                "distritosMunicipales": [
+                    "Blanco"
+                ]
+            },
+            {
+                "nombre":"Villa Tapia",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Independencia",
+        "municipios": [
+            {
+                "nombre":"Jimaní",
+                "distritosMunicipales": [
+                    "Boca de Cachón",
+                    "El Limón"
+                ]
+            },
+            {
+                "nombre":"Cristóbal",
+                "distritosMunicipales": [
+                    "Batey 8"
+                ]
+            },
+            {
+                "nombre":"Duvergé",
+                "distritosMunicipales": [
+                    "Vengan a Ver"
+                ]
+            },
+            {
+                "nombre":"La Descubierta",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Mella",
+                "distritosMunicipales": [
+                    "La Colonia"
+                ]
+            },
+            {
+                "nombre":"Postrer Río",
+                "distritosMunicipales": [
+                    "Guayabal"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "La Altagracia",
+        "municipios": [
+            {
+                "nombre":"Higüey",
+                "distritosMunicipales": [
+                    "La Otra Banda",
+                    "Lagunas de Nisibón",
+                    "Verón-Punta Cana"
+                ]
+            },
+            {
+                "nombre":"San Rafael del Yuma",
+                "distritosMunicipales": [
+                    "Bayahibe",
+                    "Boca de Yuma"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "La Romana",
+        "municipios": [
+            {
+                "nombre":"La Romana",
+                "distritosMunicipales": [
+                    "Caleta"
+                ]
+            },
+            {
+                "nombre":"Guaymate",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Villa Hermosa",
+                "distritosMunicipales": [
+                    "Cumayasa"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "La Vega",
+        "municipios": [
+            {
+                "nombre":"La Concepción de La Vega",
+                "distritosMunicipales": [
+                    "El Ranchito",
+                    "Río Verde Arriba"
+                ]
+            },
+            {
+                "nombre":"Constanza",
+                "distritosMunicipales": [
+                    "La Sabina",
+                    "Tireo"
+                ]
+            },
+            {
+                "nombre":"Jarabacoa",
+                "distritosMunicipales": [
+                    "Buena Vista",
+                    "Manabao"
+                ]
+            },
+            {
+                "nombre":"Jima Abajo",
+                "distritosMunicipales": [
+                    "Rincón"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "María Trinidad Sánchez",
+        "municipios": [
+            {
+                "nombre":"Nagua",
+                "distritosMunicipales": [
+                    "Arroyo al Medio",
+                    "Las Gordas",
+                    "San José de Matanzas"
+                ]
+            },
+            {
+                "nombre":"Cabrera",
+                "distritosMunicipales": [
+                    "Arroyo Salado",
+                    "La Entrada"
+                ]
+            },
+            {
+                "nombre":"El Factor",
+                "distritosMunicipales": [
+                    "El Pozo"
+                ]
+            },
+            {
+                "nombre":"Río San Juan",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Monseñor Nouel",
+        "municipios": [
+            {
+                "nombre":"Bonao",
+                "distritosMunicipales": [
+                    "Arroyo Toro-Masipedro",
+                    "La Salvia-Los Quemados",
+                    "Jayaco",
+                    "Juma Bejucal",
+                    "Sabana del Puerto"
+                ]
+            },
+            {
+                "nombre":"Maimón",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Piedra Blanca",
+                "distritosMunicipales": [
+                    "Juan Adrián",
+                    "Villa Sonador"
+                ]
+            }
+        ]
+    }
+]
+[
+    {
+        "provincia": "Montecristi",
+        "municipios": [
+            {
+                "nombre":"Montecristi",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Castañuela",
+                "distritosMunicipales": [
+                    "Palo Verde"
+                ]
+            },
+            {
+                "nombre":"Guayubín",
+                "distritosMunicipales": [
+                    "Cana Chapetón",
+                    "Hatillo Palma",
+                    "Villa Elisa"
+                ]
+            },
+            {
+                "nombre":"Las Matas de Santa Cruz",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Pepillo Salcedo",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Villa Vásquez",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Monte Plata",
+        "municipios": [
+            {
+                "nombre":"Monte Plata",
+                "distritosMunicipales": [
+                    "Boyá",
+                    "Chirino",
+                    "Don Juan"
+                ]
+            },
+            {
+                "nombre":"Bayaguana",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Peralvillo",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Sabana Grande de Boyá",
+                "distritosMunicipales": [
+                    "Gonzalo",
+                    "Majagual"
+                ]
+            },
+            {
+                "nombre":"Yamasá",
+                "distritosMunicipales": [
+                    "Los Botados"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Pedernales",
+        "municipios": [
+            {
+                "nombre":"Pedernales",
+                "distritosMunicipales": [
+                    "José Fco. Peña Gómez",
+                    "Juancho"
+                ]
+            },
+            {
+                "nombre":"Oviedo",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Peravia",
+        "municipios": [
+            {
+                "nombre":"Baní",
+                "distritosMunicipales": [
+                    "Catalina",
+                    "El Carretón",
+                    "El Limonal",
+                    "Las Barías",
+                    "Matanzas",
+                    "Paya",
+                    "Sabana Buey",
+                    "Villa Fundación",
+                    "Villa Sombrero"
+                ]
+            },
+            {
+                "nombre":"Nizao",
+                "distritosMunicipales": [
+                    "Pizarrete",
+                    "Santana"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Puerto Plata",
+        "municipios": [
+            {
+                "nombre":"Puerto Plata",
+                "distritosMunicipales": [
+                    "Maimón",
+                    "Yásica Arriba"
+                ]
+            },
+            {
+                "nombre":"Altamira",
+                "distritosMunicipales": [
+                    "Río Grande"
+                ]
+            },
+            {
+                "nombre":"Guananico",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Imbert",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Los Hidalgos",
+                "distritosMunicipales": [
+                    "Navas"
+                ]
+            },
+            {
+                "nombre":"Luperón",
+                "distritosMunicipales": [
+                    "Belloso",
+                    "Estrecho",
+                    "La Isabela"
+                ]
+            },
+            {
+                "nombre":"Sosúa",
+                "distritosMunicipales": [
+                    "Cabarete",
+                    "Sabaneta de Yásica"
+                ]
+            },
+            {
+                "nombre":"Villa Isabela",
+                "distritosMunicipales": [
+                    "Estero Hondo",
+                    "Gualete",
+                    "La Jaiba"
+                ]
+            },
+            {
+                "nombre":"Villa Montellano",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Samaná",
+        "municipios": [
+            {
+                "nombre":"Samaná",
+                "distritosMunicipales": [
+                    "Arroyo Barril",
+                    "El Limón",
+                    "Las Galeras"
+                ]
+            },
+            {
+                "nombre":"Las Terrenas",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Sánchez",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "San Cristóbal",
+        "municipios": [
+            {
+                "nombre":"San Cristóbal",
+                "distritosMunicipales": [
+                    "Hato Damas"
+                ]
+            },
+            {
+                "nombre":"Bajos de Haina",
+                "distritosMunicipales": [
+                    "El Carril"
+                ]
+            },
+            {
+                "nombre":"Cambita Garabito",
+                "distritosMunicipales": [
+                    "Cambita El Pueblecito"
+                ]
+            },
+            {
+                "nombre":"Los Cacaos",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Sabana Grande de Palenque",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"San Gregorio de Nigua",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Villa Altagracia",
+                "distritosMunicipales": [
+                    "La Cuchilla",
+                    "Medina",
+                    "San José del Puerto"
+                ]
+            },
+            {
+                "nombre":"Yaguate",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "San José de Ocoa",
+        "municipios": [
+            {
+                "nombre":"San José de Ocoa",
+                "distritosMunicipales": [
+                    "El Naranjal",
+                    "El Pinar",
+                    "La Ciénaga",
+                    "Nizao-Las Auyamas"
+                ]
+            },
+            {
+                "nombre":"Rancho Arriba",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Sabana Larga",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "San Juan",
+        "municipios": [
+            {
+                "nombre":"San Juan de la Maguana",
+                "distritosMunicipales": [
+                    "El Rosario",
+                    "Guanito",
+                    "Hato del Padre",
+                    "Hato Nuevo",
+                    "La Jagua",
+                    "Las Charcas de María Nova",
+                    "Pedro Corto",
+                    "Sabana Alta",
+                    "Sabaneta"
+                ]
+            },
+            {
+                "nombre":"Bohechío",
+                "distritosMunicipales": [
+                    "Arroyo Cano",
+                    "Yaque"
+                ]
+            },
+            {
+                "nombre":"El Cercado",
+                "distritosMunicipales": [
+                    "Batista",
+                    "Derrumbadero"
+                ]
+            },
+            {
+                "nombre":"Juan de Herrera",
+                "distritosMunicipales": [
+                    "Jinova"
+                ]
+            },
+            {
+                "nombre":"Las Matas de Farfán",
+                "distritosMunicipales": [
+                    "Carrera de Yegua",
+                    "Matayaya"
+                ]
+            },
+            {
+                "nombre":"Vallejuelo",
+                "distritosMunicipales": [
+                    "Jorjillo"
+                ]
+            }
+        ]
+    }
+]
+[
+    {
+        "provincia": "San Pedro de Macorís",
+        "municipios": [
+            {
+                "nombre":"San Juan de la Maguana",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Consuelo",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Guayacanes",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Quisqueya",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Ramón Santana",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"San José de Los Llanos",
+                "distritosMunicipales": [
+                    "El Puerto",
+                    "Gautier"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Sánchez Ramírez",
+        "municipios": [
+            {
+                "nombre":"Cotuí",
+                "distritosMunicipales": [
+                    "Caballero",
+                    "Comedero Arriba",
+                    "Quita Sueño"
+                ]
+            },
+            {
+                "nombre":"Cevicos",
+                "distritosMunicipales": [
+                    "La Cueva",
+                    "Platanal"
+                ]
+            },
+            {
+                "nombre":"Fantino",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"La Mata",
+                "distritosMunicipales": [
+                    "Angelina",
+                    "La Bija",
+                    "Hernando Alonzo"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Santiago",
+        "municipios": [
+            {
+                "nombre":"Santiago",
+                "distritosMunicipales": [
+                    "Baitoa",
+                    "Hato del Yaque",
+                    "La Canela",
+                    "Pedro García",
+                    "San Fco. de Jacagua"
+                ]
+            },
+            {
+                "nombre":"Bisonó",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Jánico",
+                "distritosMunicipales": [
+                    "El Caimito",
+                    "Juncalito"
+                ]
+            },
+            {
+                "nombre":"Licey al Medio",
+                "distritosMunicipales": [
+                    "Las Palomas"
+                ]
+            },
+            {
+                "nombre":"Puñal",
+                "distritosMunicipales": [
+                    "Canabacoa",
+                    "Guayabal"
+                ]
+            },
+            {
+                "nombre":"Sabana Iglesia",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"San José de las Matas",
+                "distritosMunicipales": [
+                    "El Rubio",
+                    "La Cuesta",
+                    "Las Placetas"
+                ]
+            },
+            {
+                "nombre":"Tamboril",
+                "distritosMunicipales": [
+                    "Canca La Piedra"
+                ]
+            },
+            {
+                "nombre":"Villa González",
+                "distritosMunicipales": [
+                    "El Limón",
+                    "Palmar Arriba"
+                ]
+            }
+        ]
+    },
+    {
+        "provincia": "Santiago Rodríguez",
+        "municipios": [
+            {
+                "nombre":"San Ignacio de Sabaneta",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Los Almácigos",
+                "distritosMunicipales": []
+            },
+            {
+                "nombre":"Monción",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Santo Domingo",
+        "municipios": [
+            {
+                "nombre":"Santo Domingo Este",
+                "distritosMunicipales": [
+                    "San Luis"
+                ]
+            },
+            {
+                "nombre":"Boca Chica",
+                "distritosMunicipales": [
+                    "La Caleta"
+                ]
+            },
+            {
+                "nombre":"Los Alcarrizos",
+                "distritosMunicipales": [
+                    "Palmarejo-Villa Linda",
+                    "Pantoja"
+                ]
+            },
+            {
+                "nombre":"Pedro Brand",
+                "distritosMunicipales": [
+                    "La Cuaba",
+                    "La Guáyiga"
+                ]
+            },
+            {
+                "nombre":"San Antonio de Guerra",
+                "distritosMunicipales": [
+                    "Hato Viejo"
+                ]
+            },
+            {
+                "nombre":"Santo Domingo Norte",
+                "distritosMunicipales": [
+                    "La Victoria"
+                ]
+            },
+            {
+                "nombre":"Santo Domingo Oeste",
+                "distritosMunicipales": []
+            }
+        ]
+    },
+    {
+        "provincia": "Valverde",
+        "municipios": [
+            {
+                "nombre":"Mao",
+                "distritosMunicipales": [
+                    "Ámina",
+                    "Guatapanal",
+                    "Jaibón (Pueblo Nuevo)"
+                ]
+            },
+            {
+                "nombre":"Esperanza",
+                "distritosMunicipales": [
+                    "Boca de Mao",
+                    "Jicomé",
+                    "Maizal",
+                    "Paradero"
+                ]
+            },
+            {
+                "nombre":"Laguna Salada",
+                "distritosMunicipales": [
+                    "Cruce de Guayacanes",
+                    "Jaibón",
+                    "La Caya"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+<aside class="sideNavWrapper">
+    <nav>
+        <section class="sideNavTop">
+            <header>MENU PRINCIPAL</header>
+            <section>
+                <div class="sideNavItemWrapper" [ngClass]="{ 'selected' : navItem.IsSelected }" 
+                *ngFor="let navItem of navService.Navigation.MainOptions" (click)="onSideNavClick(navItem)">
+                    <span class="sideNavCollapsedIcon sideNavItemIcon icon icon-{{ navItem.Icon }}" data-toggle="tooltip" data-placement="right" title="{{ navItem.Label }}"></span>
+                    <span class="sideNavExpandedIcon sideNavItemIcon icon icon-{{ navItem.Icon }}"></span>
+                    <span class="sideNavItemLabel">{{ navItem.Label }}</span>
+                    <span class="sideNavBadge" *ngIf="navItem.Count > 0">{{ navItem.Count }}</span>
+                    <span class="sideNavTab"></span>
+                </div>
+            </section>
+        </section>
+        <div class="sideNavSeparator"></div>
+        <section class="sideNavBottom">
+            <header>OPCIONES ADICIONALES</header>
+            <section>
+                <div class="sideNavItemWrapper" [ngClass]="{ 'selected' : navItem.IsSelected }" 
+                *ngFor="let navItem of navService.Navigation.AdditionalOptions" (click)="onSideNavClick(navItem)">
+                    <span class="sideNavCollapsedIcon sideNavItemIcon icon icon-{{ navItem.Icon }}" data-toggle="tooltip" data-placement="right" title="{{ navItem.Label }}"></span>
+                    <span class="sideNavExpandedIcon sideNavItemIcon icon icon-{{ navItem.Icon }}"></span>
+                    <span class="sideNavItemLabel">{{ navItem.Label }}</span>
+                    <span class="sideNavBadge" *ngIf="navItem.Count > 0">{{ navItem.Count }}</span>
+                    <span class="sideNavTab"></span>
+                </div>
+            </section>
+        </section>
+    </nav>
+</aside>

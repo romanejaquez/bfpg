@@ -1,0 +1,145 @@
+@import 'colors.less';
+
+.homePaymentAmount {
+    color: @appMainGreen;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.homePaymentLabel, .homeAllSectionsHeaderLabel {
+    color: @gray;
+    font-weight: bold;
+}
+
+.homeBillIcon {
+    margin-right: 10px;
+}
+
+.homePaymentSection {
+    padding: 30px 0 30px;
+    border-bottom: 1px solid @lightGray;
+}
+
+.homeSectionHeader {
+    color: @homeSectionHeader;
+    margin-bottom: 10px;
+}
+
+.homeClientRowBtns, .homeClientRowBtnLabel {
+    display: none;
+}
+
+.homeClientRowBtns .appBtnIcon {
+    margin-right: 0 !important;
+}
+
+.homeClientRow:hover .homeClientRowBtns {
+    display: block;
+}
+
+.homeSectionContainer {
+    padding: 20px 0;
+    border-bottom: 1px solid @lightGray;
+}
+
+.homeSectionContainer:last-child {
+    border-bottom: none;
+}
+
+.homeCurrencyLabel {
+    font-size: 25px;
+}
+
+.usersToPayBtnSection {
+    padding-right: 40px;
+}
+
+.usersToPayBtn {
+    max-width: 400px;
+}
+
+.noAnnotationsLabel {
+    color: gray;
+}
+
+.homePage .pageContentLeft {
+    max-width: 800px;
+}
+
+.homeAnnotationsList {
+    margin-left: 20px;
+}
+
+.homeAnnotation {
+    margin-bottom: 20px;
+}
+
+.homeAnnotationMessage {
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    .homeClientRowBtns .appBtnIcon {
+        margin-right: 0 !important;
+    }
+    
+    .homeSectionContainer .paymentRow {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+    .homeClientRowBtns {
+        display: block !important;
+        margin-top: 10px;
+    }
+    
+    .homeClientRowBtns .appBtnIcon {
+        margin-right: 5px;
+    }
+    
+    .homeClientRowBtnLabel {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 768px), screen and (max-width: 840px) {
+    
+    .homePage .pageContentColumns {
+        flex-direction: column;
+    }
+    
+    .homePage .pageContentRight {
+        text-align: left !important;
+    }
+    
+    .homePage .pageContentLeft {
+        padding-right: 0 !important;
+    }
+    
+    .usersToPayBtnSection {
+        padding-right: 0 !important;
+    }
+    
+    .paymentRowLeft {
+        flex: 1;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .homeSectionContainer .paymentRow {
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .homePage .pageContentColumns, .homePage .pageContentRight, .homePage .pageContentLeft {
+        text-align: center !important;
+        align-items: center !important;
+    }
+    
+    .homeClientRowBtns .appInfoBtn {
+        margin-bottom: 5px;
+    }
+}

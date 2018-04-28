@@ -1,0 +1,49 @@
+@import 'colors.less';
+
+.saveAfiliadoRegion, .saveRelativeRegion {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    border-top: 1px solid @lightGray;
+}
+
+.inputSectionFieldsRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputSectionFieldCell {
+    flex: 1;
+    padding: 10px;
+}
+
+.inputSectionHeader {
+    padding: 10px 0;
+    border-bottom: 1px solid @lightGray;
+    color: @appMainGreen;
+    font-weight: bold;
+}
+
+.requiredFieldsMessage {
+    display: flex;
+    justify-content: flex-end;
+    color: @requiredFieldRed;
+    font-weight: bold;
+    align-items: center;
+}
+
+.requiredField {
+    color: @requiredFieldRed;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.saveClientBtn[disabled], .saveRelativeBtn[disabled] {
+    background: @disabledBtnBg !important;
+    border: 2px solid @disabledBtnBg !important;
+}
+
+.createClientForm .ng-invalid, .createClientForm .ng-dirty.ng-touched.ng-invalid, .createClientForm .ng-untouched.ng-pristine[required], 
+.createRelativeForm .ng-invalid, .createRelativeForm .ng-dirty.ng-touched.ng-invalid, .createRelativeForm .ng-untouched.ng-pristine[required]  {
+  border: 2px solid @requiredFieldRed !important;
+}

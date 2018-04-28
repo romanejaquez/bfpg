@@ -1,0 +1,24 @@
+<header class="mainHeader">
+    <div class="mainHeaderLeft">
+        <img class="mainHeaderLogo" src="imgs/bfpg_logo_bluegray_logo.svg" />
+        <img class="mainHeaderLogoText" src="imgs/bfpg_logo_bluegray_text.svg" />
+    </div>
+    <div class="mainHeaderRight">
+        <div class="userPanelGroup btn-group">
+            <div class="userPanel" data-toggle="dropdown">
+                <span class="userPanelCaret icon icon-angle-down"></span>
+                <div>
+                    <div class="userPanelTopLabel">Bienvenido(a),</div>
+                    <div class="userPanelBottomLabel">{{ navService.User?.name }}</div>
+                </div>
+                <span class="userIcon icon icon-user"></span>
+            </div>
+            <ul class="dropdown-menu">
+                <li><a (click)="onMenuNavigate('/main/perfil')"><span class="userMenuIcon icon icon-user"></span><span>Perfil del Usuario</span></a></li>
+                <li><a (click)="onMenuNavigate('/main/ajustes')"><span class="userMenuIcon icon icon-cog-gear"></span><span>Ajustes</span></a></li>
+                <li class="divider"></li>
+                <li><a (click)="onMenuNavigate('/login')"><span class="userMenuIcon icon icon-log-out"></span><span>Salir del programa</span></a></li>
+            </ul>
+        </div>
+    </div>
+</header>

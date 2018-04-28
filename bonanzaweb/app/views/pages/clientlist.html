@@ -1,0 +1,58 @@
+<div class="pageContainer clientsPage">
+    <header>
+        <span class="headerIcon icon icon-group"></span><span>Afiliados</span>
+    </header>
+    <div class="pageToolbar">
+        <div class="pageToolbarRight">
+            <input class="searchTextField" #searchTextField type="text" placeholder="Buscar Afiliado Por Cedula" (keyup.enter)="onGetAfiliadoByCedula(searchTextField.value)"/>
+            <button class="addClientBtn appLinkBtn btn btn-link" (click)="onAddAfiliado()">
+                <span class="appLinkBtnIcon icon icon-user"></span> Anadir Afiliado
+            </button>
+        </div>
+    </div>
+    <div class="pageContentMain">
+        <table class="table table-striped table-hover table-condensed">
+            <thead>
+                <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cedula No.</th>
+                <th><span class="clientColumnHide">Tipo de Cuenta</span></th>
+                <th><span class="clientColumnHide">Estado de Cuenta</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="clientRow" style="cursor: pointer !important;" *ngFor="let afiliado of Afiliados" (click)="onViewAfiliado(afiliado._id)">
+                    <td>{{ afiliado.afiliadoPrimario.nombre }}</td>
+                    <td>{{ afiliado.afiliadoPrimario.apellido }}</td>
+                    <td>{{ afiliado.afiliadoPrimario.cedula }}</td>
+                    <td><span class="clientColumnHide">{{ afiliado.cuenta.tipo | metadata: 'tipo' }}</span></td>
+                    <td><span class="clientColumnHide">{{ afiliado.cuenta.estado }}</span></td>
+                </tr>
+            </tbody>
+            <div class="clientNotFoundMsg" *ngIf="Afiliados && Afiliados.length == 0">
+                <div>No se encontro ningun usuario con esa cedula.</div>
+            </div>
+        </table>       
+    </div>
+    <div class="pageFooterbar">
+        <div class="pageFooterbarCenter">
+            <ul class="pagination pagination-sm">
+                <li class="disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

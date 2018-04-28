@@ -1,0 +1,60 @@
+@import 'colors.less';
+
+.annotationContainer {
+    padding: 25px 20px;
+    border-bottom: 1px solid @lightGray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.annotationsPage .pageToolbar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 20px;
+}
+
+.annotationContainer:hover {
+    background: @hoverGray;
+}
+
+.annotationInnerContainer {
+    margin: 10px 0;
+    display: flex;
+}
+
+.annotationBtns {
+    display: none;
+}
+
+.annotationContainer:hover .annotationBtns {
+    display: block;
+}
+
+.annotationDate {
+    color: @appMainGreen;
+    font-size: 12px;
+}
+
+.annotationDeleteBtn {
+    padding: 10px !important;
+    font-size: 20px !important;
+}
+
+.annotationIconWrapper {
+    font-size: 20px;
+    color: @gray;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+#annotationTextarea {
+    resize: none;
+}
+
+.annotationRemainingChars {
+    font-size: 12px;
+    color: @gray;
+}

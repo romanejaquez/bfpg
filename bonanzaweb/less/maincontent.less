@@ -1,0 +1,43 @@
+@import 'colors.less';
+
+.mainContainer {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.mainAppContainer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 41px;
+    top: 54px;
+    display: flex;
+}
+
+.pageContainer {
+    position: relative;
+    padding: 20px;
+    height: 100%;
+}
+
+.pageLoading {
+    background: rgba(255,255,255,0.8);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pageLoadingLabel {
+    color: @appMainGreen;
+    margin-bottom: 10px;
+}
+
+.pageLoadingProgress {
+    width: 80px;
+}

@@ -1,0 +1,35 @@
+<div class="loginPage">
+    <div class="loginPanel">
+        <img class="loginLogo" src="imgs/bfpg_logo_green_white.svg"/>
+        <br/>
+        <div class="notificationLine">
+            <img *ngIf="Notifications.RequestInProgress" src="imgs/three-dots_green.svg" width="50"/>
+            <span>{{ Notifications.ErrorMessage }}</span>
+            </div>
+        <br/>
+        <form class="loginForm" (ngSubmit)="onLogin()" #loginForm="ngForm">           
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <div class="loginInputGroup">
+                        <span class="loginInputIcon icon icon-user"></span>
+                        <input type="text" ngControl="username" required [(ngModel)]="loginInfo.username" autocomplete="off" class="loginInputTxt form-control input-sm" id="inputEmail" placeholder="Usuario">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <div class="loginInputGroup">
+                        <span class="loginInputIcon icon icon-lock"></span>
+                        <input type="password" ngControl="password" required [(ngModel)]="loginInfo.password" autocomplete="off" class="loginInputTxt form-control input-sm" id="inputPassword" placeholder="Contrasena">
+                    </div>
+                    <div class="checkbox loginCheck">
+                        <input type="checkbox" [(ngModel)]="LocalSettings.RememberUser" #rememberCkb (change)="onRememberUser(rememberCkb.checked)" id="myCheckbox" name="myCheckbox" value="myCheckbox">
+                        <label class="checkboxOuterLabel" for="myCheckbox"><span class="checkboxInnerLabel">Recordar Usuario</span></label>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <button type="submit" class="loginBtn btn btn-success" [disabled]="!loginForm.form.valid">ENTRAR</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+/* header styles */
+
+@import 'colors.less';
+
+.userPanel {
+    display: flex;
+    text-align: right;
+    align-items: center;
+    color: @white;
+}
+
+.userPanelTopLabel {
+    font-size: 12px;
+}
+
+.userPanelBottomLabel {
+    font-weight: bold;
+    position: relative;
+    top: -4px;
+}
+
+.userIcon {
+    font-size: 30px;
+    margin: 0 20px 0 10px;
+}
+
+.mainHeader {
+    display: flex;
+}
+
+.mainHeaderLogo {
+    width: 40px;
+    position: relative;
+    top: -3px;
+    margin-left: 10px;
+}
+
+.mainHeaderLogoText {
+    width: 150px;
+}
+
+.mainHeaderLeft {
+    width: 280px;
+    padding: 10px;
+    background: @mainAppBg;
+}
+
+.mainHeaderRight {
+    background: @appMainGreen;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.userPanelGroup {
+    cursor: pointer;
+}
+
+.userPanelCaret {
+    font-size: 20px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.userMenuIcon {
+    position: relative;
+    left: -10px;
+    top: 2px;
+}
+
+.headerIcon {
+    margin-right: 10px;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 1024px) {
+    
+    .mainHeaderLeft {
+        width: 60px;
+    }
+    
+    .mainHeaderLogoText {
+        display: none;
+    }
+    
+    .mainHeaderLogo {
+        width: 100%;
+        position: relative;
+        top: -3px;
+        margin-left: 0;
+    }
+}

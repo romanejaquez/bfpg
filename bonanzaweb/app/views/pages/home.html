@@ -1,0 +1,89 @@
+<div class="pageContainer homePage">
+    <header>
+        <span class="headerIcon icon icon-home"></span><span>Inicio</span>
+    </header>
+    <div class="pageContentMain">
+        <div class="homeAllSectionsHeaderLabel">Actividades Recientes y por Ejecutar</div>
+        <div class="pageContentColumns">
+            <div class="pageContentLeft">
+                <section class="homeSectionContainer">
+                    <div class="homeSectionHeader">Ultimo Afiliado Añadido en el sistema</div>
+                    <div class="paymentRow homeClientRow">
+                        <div class="paymentRowLeft">
+                            <div class="paymentRowClientName">{{ InitialPackage?.ultimoClienteAccedido?.nombreCompleto }}</div>
+                            <div class="paymentRowClientId">Cedula No. {{ InitialPackage?.ultimoClienteAccedido?.cedula }}</div>
+                            <div class="paymentRowAccountType">Tipo de cuenta: <span class="paymentRowAccountTypeLabel">{{ InitialPackage?.ultimoClienteAccedido?.tipoDeCuenta | metadata: 'tipo' }}</span></div>
+                        </div>
+                        <div class="homeClientRowBtns">
+                                <button (click)="onViewAfiliado(InitialPackage?.ultimoClienteAccedido?._id)" class="appInfoBtn btn btn-info btn-sm" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Afiliado">
+                                    <span class="appBtnIcon icon icon-eye"></span><span class="homeClientRowBtnLabel">&nbsp;VER AFILIADO</span></button>&nbsp;
+                        </div>
+                    </div>
+                </section>
+                <section class="homeSectionContainer">
+                    <div class="homeSectionHeader">Afiliados con pagos por hacer</div>
+                    <div class="noContentMessageLabel" *ngIf="InitialPackage?.clientesPorPagar?.length == 0">No hay afiliados con pagos por hacer por el momento.</div>
+                    <div *ngIf="InitialPackage?.clientesPorPagar?.length > 0">
+                        <div class="clientList">
+                            <div class="paymentRow homeClientRow" *ngFor="let afiliado of InitialPackage?.clientesPorPagar">
+                                <div class="paymentRowLeft">
+                                    <div class="paymentRowClientName">{{ afiliado.nombre }}</div>
+                                    <div class="paymentRowClientId">Cedula No. {{ afiliado.cedula }}</div>
+                                    <div class="paymentRowAccountType">Cantidad que debe: RD${{ afiliado.cantidadQueDebe | number: '1.2' }}</div>
+                                </div>
+                                <div class="homeClientRowBtns">
+                                    <button class="appInfoBtn btn btn-info btn-sm" (click)="onViewAfiliado(afiliado._id)"
+                                    data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Ver Afiliado">
+                                        <span class="appBtnIcon icon icon-eye"></span><span class="homeClientRowBtnLabel">&nbsp;VER AFILIADO</span></button>&nbsp;
+                                    <button class="appSuccessBtn btn btn-success btn-sm"  (click)="onMakePayment(afiliado._id)"
+                                    data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Hacer Pago">
+                                        <span class="appBtnIcon icon icon-dollar"></span><span class="homeClientRowBtnLabel">&nbsp;HACER PAGO</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="usersToPayBtnSection">
+                            <button class="usersToPayBtn appInfoBtn btn btn-info btn-block"><span class="appBtnIcon icon icon-dollar"></span>&nbsp;VER AFILIADOS POR PAGAR</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="homeSectionContainer">
+                    <div class="homeSectionHeader">Anotaciones Recientes</div>
+                    <div class="homeAnnotationsList">
+                        <div class="homeAnnotation" *ngFor="let anotacion of InitialPackage?.anotacionesRecientes">
+                            <div class="homeAnnotationMessage">{{ anotacion.message }}</div>
+                            <button class="viewAnnotationBtn appLinkBtn btn btn-link btn-xs">Ver Anotacion</button> 
+                        </div>
+                    </div>
+                    <div class="noContentMessageLabel" *ngIf="InitialPackage && InitialPackage?.anotacionesRecientes.length == 0">No hay ninguna anotación por el momento.</div>
+                </section>
+            </div>
+            <div class="pageContentRight">
+                <section class="homePaymentSection">
+                    <div class="homePaymentLabel">Total the pagos hechos hoy:</div>
+                    <div class="homePaymentAmount"><span class="homeBillIcon icon icon-banknote"></span>
+                    <span class="homeCurrencyLabel">RD$</span>{{ InitialPackage?.totalPagosHoy | number:'1.2' }}</div>
+                </section>
+                <section class="homePaymentSection">
+                    <div class="homePaymentLabel">Total the pagos hechos desde inicio de mes:</div>
+                    <div class="homePaymentAmount"><span class="homeBillIcon icon icon-banknote"></span>
+                    <span class="homeCurrencyLabel">RD$</span>{{ InitialPackage?.totalPagosMes | number:'1.2' }}</div>
+                </section>
+                <br/>
+                <section>
+                    <button class="appInfoBtn btn btn-info btn-block"><span class="appBtnIcon icon icon-eye"></span>&nbsp;VER PAGOS HECHOS</button>
+                </section>
+                <br/>
+                <section>
+                    <button class="appSuccessBtn btn btn-success btn-block"><span class="appBtnIcon icon icon-dollar"></span>&nbsp;HACER PAGO RAPIDO</button>
+                </section>
+            </div>
+        </div>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

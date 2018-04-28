@@ -1,0 +1,254 @@
+/* afiliado */
+{
+    "_id": "0e8970870f7asd07f",
+    "afiliadoPrimario": {
+        "nombre": "Roman Ernesto",
+        "apellido": "Jaquez Reynoso",
+        "apodo": "Temetito",
+        "fechaDeNacimiento": "12/31/1979",
+        "miembroDesde": "12/12/2000",
+        "cedula": "048-569569-555",
+        "direccion": {
+            "calle":"Avenida Luperon, Ensanche los Prados",
+            "provincia": "Monsenor Nouel",
+            "municipio": "Bonao",
+            "referenciaLugar": "al frente de un colmado"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "romanejaquez@gmail.com"
+    },
+    "afiliadoSecundario": {
+        "nombre": "Roman Ernesto",
+        "apellido": "Jaquez Reynoso",
+        "apodo": "Temetito",
+        "fechaDeNacimiento": "12/31/1979",
+        "cedula": "048-569569-555",
+        "direccion": {
+            "calle":"Avenida Luperon, Ensanche los Prados",
+            "provincia": "Monsenor Nouel",
+            "municipio": "Bonao",
+            "referenciaLugar": "al frente de un colmado"
+        },
+        "telefono": {
+            "casa":"809-555-8965",
+            "celular": "809-569-8596",
+            "trabajo": "809-222-5555"
+        },
+        "email": "romanejaquez@gmail.com"
+    },
+    "cuenta": {
+        "tipo":"789007070oiup098u",
+        "estado": "Activa",
+        "frequenciaDePago": "789007070oiup098u"
+    },
+    "familiaresBeneficiados": [
+        {
+            "nombre": "Roman Ernesto",
+            "apellido": "Jaquez Reynoso",
+            "apodo": "Temetito",
+            "fechaDeNacimiento": "12/31/1979",
+            "parentesco": "hijo",
+            "cedula": "048-569569-555",
+            "direccion": {
+                "igualDeAfiliado": false,
+                "calle":"Avenida Luperon, Ensanche los Prados",
+                "provincia": "Monsenor Nouel",
+                "municipio": "Bonao",
+                "referenciaLugar": "al frente de un colmado"
+            },
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "romanejaquez@gmail.com"
+        },
+        {
+            "nombre": "Roman Ernesto",
+            "apellido": "Jaquez Reynoso",
+            "apodo": "Temetito",
+            "fechaDeNacimiento": "12/31/1979",
+            "parentesco": "padre",
+            "actaDeNacimiento": "236546-98794651",
+            "telefono": {
+                "casa":"809-555-8965",
+                "celular": "809-569-8596",
+                "trabajo": "809-222-5555"
+            },
+            "email": "romanejaquez@gmail.com"
+        }
+    ],
+    "actividadDePago": {
+        "pagosPorHacer": [
+            {
+                "transaccionId": "BF-387948-898908098",
+                "afiliadoId": "0e8970870f7asd07f",
+                "fecha": "12/31/1990 2:45",
+                "totalAPagar": 50,
+                "cantidadPaga": 30,
+                "cantidadPorPagar": 20,
+                "nota": "Se pago a tiempo"
+            }
+        ]
+    },
+    "notas": [
+        {
+            "fecha": "12/32/2016 2:45PM",
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": "12/32/2016 2:45PM",
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        },
+        {
+            "fecha": "12/32/2016 2:45PM",
+            "mensaje": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        }
+    ]
+}
+
+/* actividad de pago */
+
+{
+    "_id": "7808908907dsfa87089",
+    "historialDePago": [
+        {
+            "transaccionId": "BF-387948-898908098",
+            "fecha": "12/31/1990 2:45",
+            "totalAPagar": 50,
+            "cantidadPaga": 50,
+            "cantidadPorPagar": 0,
+            "frequenciaDePago": "789007070oiup098u"
+        },
+        {
+            "transaccionId": "BF-387948-898908098",
+            "fecha": "12/31/1990 2:45",
+            "totalAPagar": 50,
+            "cantidadPaga": 50,
+            "cantidadPorPagar": 0,
+            "frequenciaDePago": "789007070oiup098u"
+        },
+        {
+            "transaccionId": "BF-387948-898908098",
+            "fecha": "12/31/1990 2:45",
+            "totalAPagar": 50,
+            "cantidadPaga": 50,
+            "cantidadPorPagar": 0,
+            "frequenciaDePago": "789007070oiup098u",
+            "nota": {
+                "usuario": {
+                    "_id": "87089iiiui87089gjhklj",
+                    "nombre": "Roman Ernesto",
+                    "apellido": "Jaquez Reynoso"
+                },
+                "mensaje":"Esta se pago a tiempo",
+                "fecha": "12/31/2016"
+            }
+        }
+    ]
+}
+
+/* tipos de cuentas */
+
+[
+    {
+        "nombre": "Basica",
+        "cantidadAPagar": 40
+    },
+    {
+        "nombre": "Mediana",
+        "cantidadAPagar": 60
+    },
+    {
+        "nombre": "Premium",
+        "cantidadAPagar": 100
+    }
+]
+
+/* frequencias de pago */
+[
+    {
+        "nombre": "Semanal"
+    },
+    {
+        "nombre": "Quincenal"
+    },
+    {
+        "nombre": "Mensual"
+    }
+]
+
+/* usuario */
+{
+    "_id": "87089iiiui87089gjhklj",
+    "nombre": "Roman Ernesto",
+    "apellido": "Jaquez Reynoso",
+    "email": "romanejaquez@gmail.com",
+    "password": "7aidj;asj;kdiuaiufasdfjafasdfiu",
+    "anotaciones": [
+        {
+            "fecha": "12/31/1979 1:45PM",
+            "mensaje": "das sdkj asdkjf a;klsdj a;dksjf a;dksfj ;asdjkf;",
+            "tarea": false,
+            "completa": false
+        }
+    ]
+}
+
+/* initial package */
+
+{
+    "totalPaymentsToday": 400,
+    "totalPaymentsForMonth": 800,
+    "lastAccessedClient": {
+        "_id": "asjkdlfjasdf",
+        "name": "Jaquez, Roman Octavio"
+    },
+    "clientsWithDuePayments": [
+        {
+            "_id": "df;aslsoifusdofoasf",
+            "name": "Perez, Jose Francisco",
+            "amountOwed": 50
+        }
+    ],
+    "recentAnnotations": [
+        {
+            "_id": "jdsf;ajsdfds",
+            "date": "2016-12-12",
+            "message": "Lorem ipsum d;fj s;dakljf sad;lfkjsad;lfjksad;fkljsad adsf s"
+        }
+    ]
+}
+
+[
+    {
+        "nombre": "hija"
+    },
+    {
+        "nombre": "hijo"
+    },
+    {
+        "nombre": "esposo"
+    },
+    {
+        "nombre": "esposa"
+    },
+    {
+        "nombre": "suegro"
+    },
+    {
+        "nombre": "suegra"
+    },
+    {
+        "nombre": "padre"
+    },
+    {
+        "nombre": "madre"
+    }
+]
+
+

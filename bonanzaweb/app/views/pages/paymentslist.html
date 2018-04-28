@@ -1,0 +1,42 @@
+<div class="pageContainer paymentsPage">
+    <header>
+        <span class="headerIcon icon icon-dollar"></span><span>Pagos por hacer</span>
+    </header>
+    <div class="pageContentMain" >
+        <div class="noContentMessageLabel" *ngIf="PaymentsPackage?.afiliados?.length == 0">No hay afiliados con pagos por hacer por el momento.</div>
+        <div *ngIf="PaymentsPackage?.afiliados?.length > 0">
+            <div class="paymentsList">
+                <div class="paymentRow" *ngFor="let afiliado of PaymentsPackage?.afiliados">
+                    <div class="paymentRowLeft">
+                        <div class="paymentRowClientName">{{ afiliado.afiliadoPrimario.apellido }}, {{ afiliado.afiliadoPrimario.nombre }}</div>
+                        <div class="paymentRowClientId">Cedula No. {{ afiliado.afiliadoPrimario.cedula }}</div>
+                        <div class="paymentRowAccountType">Tipo de cuenta: <span class="paymentRowAccountTypeLabel">{{ afiliado.cuenta.tipo | metadata: 'tipo' }}</span></div>
+                        <div class="paymentRowSmallLabel">Estado de cuenta: <b>{{ afiliado.cuenta.estado }}</b></div>
+                    </div>
+                    <div class="paymentRowRight">
+                        <div class="paymentRowAmount">
+                            <div class="paymentRowAmountLabel">Cantidad a Pagar:</div>
+                            <div class="paymentRowAmountValue">RD${{ afiliado.cantidadTotalPorPagar | number: '2.2' }}</div>
+                        </div>
+                        <div class="paymentRowIcons">
+                            <span class="paymentRowIcon icon icon-dollar" data-toggle="tooltip" data-placement="bottom" title="Hacer Pago" (click)="onMakePayment(afiliado._id)"></span>
+                            <span class="paymentRowIcon icon icon-eye" data-toggle="tooltip" data-placement="bottom" title="Ver Afiliado" (click)="onViewAfiliado(afiliado._id)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentsTotalRegion">
+                <div class="paymentsTotal">
+                    <div class="paymentsTotalLabel">Monto total por cobrar:</div>
+                    <div class="paymentsTotalAmount">RD${{ PaymentsPackage?.cantidadTotalACobrar | number: '2.2' }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

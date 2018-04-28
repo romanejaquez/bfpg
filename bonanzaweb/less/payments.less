@@ -1,0 +1,238 @@
+@import 'colors.less';
+
+.paymentsTotalRegion {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.paymentsTotalLabel {
+    font-size: 14px;
+    font-weight: bold;
+    color: @gray;
+}
+
+.paymentsTotalAmount {
+    font-size: 35px;
+    font-weight: bold;
+    color: @lightBlue;
+    position: relative;
+}
+
+.paymentRowAmount {
+    text-align: center;
+}
+
+.paymentRowAmountLabel {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.paymentRowAmountValue {
+    font-size: 20px;
+    font-weight: bold;
+    color: @appMainGreen;
+}
+
+.paymentRowIcons {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.paymentRowIcon {
+    border: 1px solid @appMainGreen;
+    padding: 8px;
+    border-radius: 50%;
+    color: @appMainGreen;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.paymentRowIcon:hover {
+    background: @appMainGreen;
+    color: @white;
+}
+
+.makePaymentClientName, .makePaymentClientId  {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.makePaymentClientLabel {
+    color: @lightBlue;
+}
+
+.makePaymentPage .pageContentMain {
+    padding: 20px;
+}
+
+.makePaymentHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid @lightGray;
+    padding-bottom: 20px;
+}
+
+.makePaymentHeaderLeft {
+    flex: 1;
+}
+
+.makePaymentHeaderRight {
+    flex: 1;
+    text-align: right;
+}
+
+.makePaymentBottomSection {
+    border-top: 1px solid #ECECEC;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.makePaymentAnotherAmountPanel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.makePaymentCheckbox, .makePaymentCheckboxLabel, .radioOuterLabel {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: @appMainGreen;
+}
+
+.radioInnerLabel {
+    color: @black;
+    font-weight: bold;
+}
+
+.makePaymentAmountSection {
+    text-align: right;
+}
+
+.makePaymentAmountLabel {
+    color: @gray;
+    font-size: 14px;
+}
+
+.makePaymentAmountValue {
+    color: @lightBlue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.makePaymentAmountNumber {
+    font-size: 25px;
+}
+
+.makePaymentCedulaLabel {
+    color: @gray;
+}
+
+.makePaymentFrequencyLabel {
+    color: @appMainGreen;
+    font-weight: bold;
+}
+
+.makePaymentSectionHeader {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.breadCrumbDivider {
+    margin: 0px 10px;
+    color: @lighterBlue;
+}
+
+.paymentParentLink {
+    cursor: pointer;
+}
+
+.paymentParentLink:hover {
+    color: @lightBlue2;
+}
+
+.makePaymentBtnRegion {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.makePaymentBtn {
+    flex: 0.3;
+}
+
+.makePaymentRadio {
+    background: #ECECEC;
+    padding: 10px 5px 5px 10px;
+}
+
+.makePaymentHistoryLastPayment {
+    padding: 20px;
+    border: 2px solid @lightBlue;
+    margin-bottom: 20px;
+    color: @lightBlue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.makePaymentHistoryDate {
+    margin: 0 20px 0 10px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .paymentsList .paymentRow {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .paymentsList .paymentRowRight {
+        flex-direction: column;
+        display: block;
+    }
+    
+    .paymentsTotalRegion {
+        text-align: center;
+        justify-content: center;
+        margin: 50px 0 10px 0;
+    }
+    
+    .paymentsList .paymentRowAmount {
+        margin-top: 20px;
+    }
+    
+    .paymentRowIcons .paymentRowIcon:first-child {
+        margin-left: 0px;
+    }
+    
+    .paymentRowIcons {
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .makePaymentHeader {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .makePaymentHeaderRight {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .makePaymentBtn {
+        flex: 1;
+    }
+    
+    .makePaymentAnotherAmountPanel {
+        flex-direction: column;
+    }
+}

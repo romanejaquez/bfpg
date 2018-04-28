@@ -1,0 +1,69 @@
+.btn-sm, .btn-group-sm > .btn-sm, .btn, .btn-group-sm > .btn {
+    border-radius: 30px !important;
+}
+
+textarea, input, button { outline: none !important; }
+
+.userPanelGroup .dropdown-menu {
+    left: -30px;
+    top: 43px;
+}
+
+input[type=radio],
+input[type='checkbox'] {
+  display: none;
+}
+input[type=radio] + label {
+  display: block;
+}
+input[type='checkbox'] + label:before,
+input[type='radio'] + label:before {
+  display: inline-block;
+  font-family: 'gremio';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-right: 8px;
+  width: 23px;
+}
+input[type=radio] + label:before {
+  content: "\60"; /* Radio Unchecked */
+}
+input[type=radio]:checked + label:before {
+  content: "\3b"; /* Radio Checked */
+}
+input[type="checkbox"] + label:before {
+  content: "\e0c9"; /* Checkbox Unchecked */
+}
+input[type="checkbox"]:checked + label:before {
+  content: "\3d"; /* Checkbox Checked */
+}
+.radio label,
+.checkbox label {
+  padding-left: 0;
+}
+
+.checkboxOuterLabel, .radioOuterLabel{
+    font-size: 20px !important;
+}
+
+.checkboxInnerLabel, .radioInnerLabel {
+    font-size: 15px !important;
+    position: relative;
+    top: -5px;
+    margin-left: 5px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.userPanelGroup .dropdown-menu > li > a {
+  padding: 5px 20px;
+}
+
+.modal-header {
+    background: #ECECEC;
+    border-radius: 7px 7px 0 0;
+}

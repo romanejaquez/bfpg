@@ -1,0 +1,264 @@
+<div class="pageContainer clientDetailsPage">
+    <header>
+        <span class="headerIcon icon icon-group"></span><span class="paymentParentLink" (click)="backToParent()">Afiliados</span><span class="breadCrumbDivider">/</span><span>{{ PageTitle }}</span>
+    </header>
+    <div class="pageContentMain">
+        <div class="requiredFieldsMessage">
+            <span class="icon icon-asterisk"></span> Campos Requeridos
+        </div>
+        <form class="createClientForm" (ngSubmit)="onCreateClient()" #createClientForm="ngForm">
+        <div class="inputSection">
+            <div class="inputSectionHeader">Afiliado Primario</div>
+            <div class="inputSectionFieldsContainer">
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoNombre">Nombre</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoNombre" [(ngModel)]="Client.afiliadoPrimario.nombre" id="afiliadoNombre" type="text" required>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoApodo">Apodo</label>
+                            <input class="form-control input-sm" ngControl="afiliadoApodo" [(ngModel)]="Client.afiliadoPrimario.apodo" id="afiliadoApodo" type="text">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoApellido">Apellido</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoApellido" [(ngModel)]="Client.afiliadoPrimario.apellido" id="afiliadoApellido" type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoDOB">Fecha de Nacimiento</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" oninvalid="this.setCustomValidity('Introduzca una fecha de nacimiento válida')"
+                            oninput="setCustomValidity('')" ngControl="afiliadoDOB" [(ngModel)]="Client.afiliadoPrimario.fechaDeNacimiento" id="afiliadoDOB" type="date" required>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoCedula">Cédula</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoCedula" [(ngModel)]="Client.afiliadoPrimario.cedula" id="afiliadoCedula" type="text" required pattern="^\d{3}-\d{7}-\d{1}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXXXXXX-X')" placeholder="000-0000000-1">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoEmail">Cuenta de Correo</label>
+                            <input class="form-control input-sm" ngControl="afiliadoEmail" 
+                            oninvalid="this.setCustomValidity('Introduzca una cuenta de correo válida')"
+                            oninput="setCustomValidity('')" [(ngModel)]="Client.afiliadoPrimario.email" id="afiliadoEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoDireccion">Dirección</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoDireccion" [(ngModel)]="Client.afiliadoPrimario.direccion.calle" id="afiliadoDireccion" type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoProvincia">Provincia</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoProvincia" ngControl="afiliadoProvincia" class="form-control" #provincia (change)="onChangeProvincia(provincia.value)" required>
+                                <option *ngFor="let provincia of Metadata.provincias; let i = index;" [value]="i">{{ provincia.provincia }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoMunicipio">Municipio</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoMunicipio" ngControl="afiliadoMunicipio" class="form-control" #municipio (change)="onChangeMunicipio(municipio.value)" required>
+                                <option *ngFor="let municipio of Provincia.municipios; let i = index;" [value]="i">{{ municipio.nombre }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group" *ngIf="Municipio.distritosMunicipales.length > 0">
+                            <label class="control-label" for="afiliadoDistrito">Distrito Municipal</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoDistrito" ngControl="afiliadoDistrito" class="form-control" #distrito (change)="onChangeDistritoMunicipal(distrito.value)" required>
+                                <option *ngFor="let distrito of Municipio.distritosMunicipales; let i = index;" [value]="i">{{ distrito }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="refLugar">Referencia de Lugar</label>
+                            <input class="form-control input-sm" ngControl="refLugar" [(ngModel)]="Client.afiliadoPrimario.direccion.referenciaLugar" id="refLugar" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="telCasa">Telefono (casa)</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="telCasa" [(ngModel)]="Client.afiliadoPrimario.telefono.casa" id="telCasa" type="tel" required pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')" placeholder="809-555-5555">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="telCel">Telefono (celular)</label>
+                            <input class="form-control input-sm" ngControl="telCel" [(ngModel)]="Client.afiliadoPrimario.telefono.celular" id="telCel" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')" placeholder="809-555-5555">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="telWork">Telefono (trabajo)</label>
+                            <input class="form-control input-sm" ngControl="telWork" [(ngModel)]="Client.afiliadoPrimario.telefono.trabajo" id="telWork" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')" placeholder="809-555-5555">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputSectionHeader">Afiliado Secundario</div>
+            <div class="inputSectionFieldsContainer">
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecNombre">Nombre</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoSecNombre" [(ngModel)]="Client.afiliadoSecundario.nombre" id="afiliadoSecNombre" type="text" required>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecApodo">Apodo</label>
+                            <input class="form-control input-sm" ngControl="afiliadoSecApodo" [(ngModel)]="Client.afiliadoSecundario.apodo" id="afiliadoApodo" type="text">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecApellido">Apellido</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoSecApellido" [(ngModel)]="Client.afiliadoSecundario.apellido" id="afiliadoSecApellido" type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecDOB">Fecha de Nacimiento</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" oninvalid="this.setCustomValidity('Introduzca una fecha de nacimiento válida')"
+                            oninput="setCustomValidity('')" ngControl="afiliadoSecDOB" [(ngModel)]="Client.afiliadoSecundario.fechaDeNacimiento" id="afiliadoSecDOB" type="date" required>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecCedula">Cédula</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoSecCedula" [(ngModel)]="Client.afiliadoSecundario.cedula" id="afiliadoSecCedula" type="text" required pattern="^\d{3}-\d{7}-\d{1}$" placeholder="000-0000000-1" oninvalid="this.setCustomValidity('Formato válido: XXX-XXXXXXX-X')">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecEmail">Cuenta de Correo</label>
+                            <input class="form-control input-sm" ngControl="afiliadoSecEmail" [(ngModel)]="Client.afiliadoSecundario.email" id="afiliadoSecEmail" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecDireccion">Dirección</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="afiliadoSecDireccion" [(ngModel)]="Client.afiliadoSecundario.direccion.calle" id="afiliadoSecDireccion" type="text" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecProvincia">Provincia</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoSecProvincia" ngControl="afiliadoSecProvincia" class="form-control" #secprovincia (change)="onChangeSecProvincia(secprovincia.value)" required>
+                                <option *ngFor="let provincia of Metadata.provincias; let i = index;" [value]="i">{{ provincia.provincia }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoSecMunicipio">Municipio</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoSecMunicipio" ngControl="afiliadoSecMunicipio" class="form-control" #secmunicipio (change)="onChangeSecMunicipio(secmunicipio.value)" required>
+                                <option *ngFor="let municipio of SecProvincia.municipios; let i = index;" [value]="i">{{ municipio.nombre }}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group" *ngIf="SecMunicipio.distritosMunicipales.length > 0">
+                            <label class="control-label" for="afiliadoSecDistrito">Distrito Municipal</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoSecDistrito" ngControl="afiliadoSecDistrito" class="form-control" #secdistrito (change)="onChangeSecDistritoMunicipal(secdistrito.value)" required>
+                                <option *ngFor="let distrito of SecMunicipio.distritosMunicipales; let i = index;" [value]="i">{{ distrito }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="secRefLugar">Referencia de Lugar</label>
+                            <input class="form-control input-sm" ngControl="secRefLugar" [(ngModel)]="Client.afiliadoSecundario.direccion.referenciaLugar" id="secRefLugar" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="secTelCasa">Telefono (casa)</label><span class="requiredField icon icon-asterisk"></span>
+                            <input class="form-control input-sm" ngControl="secTelCasa" [(ngModel)]="Client.afiliadoSecundario.telefono.casa" id="secTelCasa" type="tel" required pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')"  placeholder="809-555-5555" >
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="secTelCel">Telefono (celular)</label>
+                            <input class="form-control input-sm" ngControl="secTelCel" [(ngModel)]="Client.afiliadoSecundario.telefono.celular" id="secTelCel" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')" placeholder="809-555-5555">
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="secTelWork">Telefono (trabajo)</label>
+                            <input class="form-control input-sm" ngControl="secTelWork" [(ngModel)]="Client.afiliadoSecundario.telefono.trabajo" id="secTelWork" type="tel" pattern="^\d{3}-\d{3}-\d{4}$" oninvalid="this.setCustomValidity('Formato válido: XXX-XXX-XXXX')"
+                            oninput="setCustomValidity('')" placeholder="809-555-5555">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="inputSectionHeader">Cuenta</div>
+            <div class="inputSectionFieldsContainer">
+                <div class="inputSectionFieldsRow">
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoTipoCuenta">Tipo de Cuenta</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoTipoCuenta" ngControl="afiliadoTipoCuenta" [(ngModel)]="Client.cuenta.tipo" class="form-control" #tipo required>
+                                <option *ngFor="let cuenta of Metadata?.cuentas" [value]="cuenta._id">{{ cuenta.nombre }} - Paga RD${{ cuenta.cantidadAPagar | number: '2.2'}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="inputSectionFieldCell">
+                        <div class="form-group">
+                            <label class="control-label" for="afiliadoFrecuentaPago">Frecuencia de Pago</label><span class="requiredField icon icon-asterisk"></span>
+                            <select id="afiliadoFrecuentaPago" ngControl="afiliadoFrecuentaPago" [(ngModel)]="Client.cuenta.frecuenciaDePago" class="form-control" #frecuencia required>
+                                <option *ngFor="let frecuencia of Metadata?.frecuencias" [value]="frecuencia._id">{{ frecuencia.nombre }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+             </div>
+        </div>
+        <div class="saveAfiliadoRegion">
+            <button type="submit" class="saveClientBtn appSuccessBtn btn btn-success" [disabled]="!createClientForm.form.valid"><span class="appBtnIcon icon icon-user"></span> GUARDAR AFILIADO</button>
+        </div>
+        </form>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

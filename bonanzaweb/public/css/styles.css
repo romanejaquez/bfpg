@@ -1,0 +1,129 @@
+.annotationContainer{padding:25px 20px;border-bottom:1px solid #ececec;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.annotationsPage .pageToolbar{position:absolute;right:0;top:0;margin:20px}.annotationContainer:hover{background:#f1f1f1}
+.annotationInnerContainer{margin:10px 0;display:flex}.annotationBtns{display:none}
+.annotationContainer:hover .annotationBtns{display:block}.annotationDate{color:#18bc9c;font-size:12px}
+.annotationDeleteBtn{padding:10px !important;font-size:20px !important}.annotationIconWrapper{font-size:20px;color:gray;margin-right:10px;margin-top:3px}
+#annotationTextarea{resize:none}.annotationRemainingChars{font-size:12px;color:gray}
+.btn-sm,.btn-group-sm>.btn-sm,.btn,.btn-group-sm>.btn{border-radius:30px !important}
+textarea,input,button{outline:none !important}.userPanelGroup .dropdown-menu{left:-30px;top:43px}
+input[type=radio],input[type='checkbox']{display:none}input[type=radio]+label{display:block}
+input[type='checkbox']+label:before,input[type='radio']+label:before{display:inline-block;font-family:'gremio';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;padding-right:8px;width:23px}
+input[type=radio]+label:before{content:"\60"}input[type=radio]:checked+label:before{content:"\3b"}
+input[type="checkbox"]+label:before{content:"\e0c9"}
+input[type="checkbox"]:checked+label:before{content:"\3d"}
+.radio label,.checkbox label{padding-left:0}.checkboxOuterLabel,.radioOuterLabel{font-size:20px !important}
+.checkboxInnerLabel,.radioInnerLabel{font-size:15px !important;position:relative;top:-5px;margin-left:5px;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+.userPanelGroup .dropdown-menu>li>a{padding:5px 20px}.modal-header{background:#ececec;border-radius:7px 7px 0 0}
+.clientDetailsPage .pageToolbar{display:block;position:absolute;right:0;top:0;margin:20px}
+.clientDetailsSection{margin-bottom:10px}.clientDetailsSectionHeaderExpander{margin-right:10px}
+.clientDetailsSectionHeader{color:gray;font-weight:bold;background:#ececec;padding:10px;display:flex;align-items:center;cursor:pointer;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none}
+.clientDetailsSectionContent{padding:15px}.clientDetailsSectionRow{display:flex;justify-content:space-between;margin-bottom:25px;padding-bottom:25px;border-bottom:1px solid #ececec}
+.clientDetailsSectionCell{flex:1}.clientDetailsSectionCellHeader{color:#01a5da}.clientDetailsSectionCellContent{color:gray;font-size:18px;max-width:350px;padding-right:30px}
+.clientDetailsSectionContentHeader{display:flex;justify-content:flex-end}.clientDetailsListBtns{display:flex;justify-content:flex-end}
+.clientDetailsListBtn{margin-left:10px}@media only screen and (max-width:480px){.clientDetailsSectionRow{flex-direction:column}
+.clientDetailsSectionCell{margin-bottom:30px}.clientDetailsPage .pageToolbar{display:none}
+}.clientsPage .pageToolbar{display:flex;flex-direction:row-reverse;padding:20px 0}
+.clientsPage .pageToolbarRight{display:flex}.clientsPage .pageFooterbar{display:flex;justify-content:center}
+.searchTextField{padding:5px;width:250px;border-radius:20px;text-align:center;border:1px solid #ececec;color:#01a5da;margin-right:10px}
+.clientColumnHide{display:block}tr.clientRow{cursor:pointer !important}.clientNotFoundMsg{padding:10px;color:gray}
+.clientDetailsHeader{display:flex;justify-content:space-between;margin-bottom:20px;border-bottom:1px solid #ececec;padding-bottom:20px}
+.clientDetailsPage .pageContentMain{padding:20px}.clientDetailsHeaderLeft{flex:1}
+.clientDetailsHeaderRight{flex:1;text-align:right}.clientDetailsClientLabel{color:#01a5da}
+.clientDetailsClientName,.clientDetailsClientId{font-size:25px;font-weight:bold}.clientDetailsCedulaLabel{color:gray}
+.clientDetailsFrequencyLabel{color:#18bc9c;font-weight:bold}@media only screen and (max-width:480px){.clientsPage .pageToolbar{justify-content:center}
+.clientsPage .pageToolbarRight{flex-direction:column}.clientsPage .addClientBtn{display:none !important}
+.clientsPage .searchTextField{width:300px;margin-right:0}.clientColumnHide{display:none}
+.clientDetailsHeader{flex-direction:column;text-align:center;justify-content:center;align-items:center}
+.clientDetailsHeaderRight{text-align:center;margin-top:30px}}.mainFooter{position:absolute;bottom:0;padding:12px;display:flex;background:#ececec;font-size:12px;color:gray;width:100%;text-align:right;justify-content:flex-end}
+.userPanel{display:flex;text-align:right;align-items:center;color:#FFF}.userPanelTopLabel{font-size:12px}
+.userPanelBottomLabel{font-weight:bold;position:relative;top:-4px}.userIcon{font-size:30px;margin:0 20px 0 10px}
+.mainHeader{display:flex}.mainHeaderLogo{width:40px;position:relative;top:-3px;margin-left:10px}
+.mainHeaderLogoText{width:150px}.mainHeaderLeft{width:280px;padding:10px;background:#2c3e50}
+.mainHeaderRight{background:#18bc9c;flex:1;display:flex;align-items:center;justify-content:flex-end}
+.userPanelGroup{cursor:pointer}.userPanelCaret{font-size:20px;margin-right:10px;position:relative;top:5px}
+.userMenuIcon{position:relative;left:-10px;top:2px}.headerIcon{margin-right:10px}
+@media only screen and (max-width:1024px){.mainHeaderLeft{width:60px}.mainHeaderLogoText{display:none}
+.mainHeaderLogo{width:100%;position:relative;top:-3px;margin-left:0}}.homePaymentAmount{color:#18bc9c;font-weight:bold;font-size:40px}
+.homePaymentLabel,.homeAllSectionsHeaderLabel{color:gray;font-weight:bold}.homeBillIcon{margin-right:10px}
+.homePaymentSection{padding:30px 0 30px;border-bottom:1px solid #ececec}.homeSectionHeader{color:#f39c12;margin-bottom:10px}
+.homeClientRowBtns,.homeClientRowBtnLabel{display:none}.homeClientRowBtns .appBtnIcon{margin-right:0 !important}
+.homeClientRow:hover .homeClientRowBtns{display:block}.homeSectionContainer{padding:20px 0;border-bottom:1px solid #ececec}
+.homeSectionContainer:last-child{border-bottom:0}.homeCurrencyLabel{font-size:25px}
+.usersToPayBtnSection{padding-right:40px}.usersToPayBtn{max-width:400px}.noAnnotationsLabel{color:gray}
+.homePage .pageContentLeft{max-width:800px}.homeAnnotationsList{margin-left:20px}
+.homeAnnotation{margin-bottom:20px}.homeAnnotationMessage{margin-bottom:10px}@media only screen and (max-width:1024px){.homeClientRowBtns .appBtnIcon{margin-right:0 !important}
+.homeSectionContainer .paymentRow{align-items:flex-start;flex-direction:column}.homeClientRowBtns{display:block !important;margin-top:10px}
+.homeClientRowBtns .appBtnIcon{margin-right:5px}.homeClientRowBtnLabel{display:block !important}
+}@media only screen and (max-width:768px),screen and (max-width:840px){.homePage .pageContentColumns{flex-direction:column}
+.homePage .pageContentRight{text-align:left !important}.homePage .pageContentLeft{padding-right:0 !important}
+.usersToPayBtnSection{padding-right:0 !important}.paymentRowLeft{flex:1;display:block}
+}@media only screen and (max-width:480px){.homeSectionContainer .paymentRow{align-items:center !important;text-align:center !important}
+.homePage .pageContentColumns,.homePage .pageContentRight,.homePage .pageContentLeft{text-align:center !important;align-items:center !important}
+.homeClientRowBtns .appInfoBtn{margin-bottom:5px}}.notificationLine{color:#18bc9c;display:flex;justify-content:center;align-content:center;min-height:30px}
+.loginPage{background:#2c3e50;display:flex;justify-content:center;align-items:center;position:absolute;top:0;right:0;left:0;bottom:0}
+.loginPanel{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.loginInputGroup{position:relative}.loginInputIcon{color:#FFF;position:absolute;left:20px;font-size:20px;top:7px}
+.loginLogo{width:150px;margin-bottom:20px}.loginForm{display:flex;flex-direction:column;width:400px}
+.loginCheck{color:#FFF}.loginBtn{margin:0 15px}.loginInputTxt{background:transparent !important;border:2px solid #45586b !important;border-radius:20px !important;text-align:center !important;color:#FFF !important}
+.mainContainer{width:100%;overflow-y:auto}.mainAppContainer{position:absolute;left:0;right:0;bottom:41px;top:54px;display:flex}
+.pageContainer{position:relative;padding:20px;height:100%}.pageLoading{background:rgba(255,255,255,0.8);position:absolute;top:0;right:0;bottom:0;left:0;display:flex;justify-content:center;align-items:center;text-align:center}
+.pageLoadingLabel{color:#18bc9c;margin-bottom:10px}.pageLoadingProgress{width:80px}
+.dialogComponent{position:absolute;top:0;left:0;right:0;bottom:0;justify-content:center;align-items:center}
+.dialogOverlay{position:absolute;width:100%;height:100%;background:#000;opacity:.5}
+.modal-header{cursor:move}.modal{display:block !important}.saveAfiliadoRegion,.saveRelativeRegion{display:flex;justify-content:flex-end;padding-top:20px;border-top:1px solid #ececec}
+.inputSectionFieldsRow{display:flex;justify-content:space-between}.inputSectionFieldCell{flex:1;padding:10px}
+.inputSectionHeader{padding:10px 0;border-bottom:1px solid #ececec;color:#18bc9c;font-weight:bold}
+.requiredFieldsMessage{display:flex;justify-content:flex-end;color:#ff8989;font-weight:bold;align-items:center}
+.requiredField{color:#ff8989;font-size:10px;margin-left:5px}.saveClientBtn[disabled],.saveRelativeBtn[disabled]{background:#c5c5c5 !important;border:2px solid #c5c5c5 !important}
+.createClientForm .ng-invalid,.createClientForm .ng-dirty.ng-touched.ng-invalid,.createClientForm .ng-untouched.ng-pristine[required],.createRelativeForm .ng-invalid,.createRelativeForm .ng-dirty.ng-touched.ng-invalid,.createRelativeForm .ng-untouched.ng-pristine[required]{border:2px solid #ff8989 !important}
+.pageContainer>header{display:flex;align-items:center;font-size:20px;font-weight:bold;color:#01a5da;margin-bottom:20px}
+.paymentRow{display:flex;justify-content:space-between;align-items:center;padding:20px;border-bottom:1px solid #ececec;cursor:pointer}
+.paymentRow:last-child{border-bottom:0}.paymentRow:hover{background:#f1f1f1}.paymentRowLeft{flex:2}
+.paymentRowRight{flex:1;display:flex;justify-content:space-between}.paymentRowClientName{font-size:25px;font-weight:bold}
+.paymentRowClientId{color:#01a5da;font-size:12px}.paymentRowAccountType{font-size:12px;font-weight:bold}
+.paymentRowAccountTypeLabel{color:#18bc9c}.paymentRowSmallLabel{font-size:12px;color:gray}
+.appLinkBtn{color:#01a5da !important;display:inline-flex !important;align-items:center !important;border:1px solid #01a5da !important;text-decoration:none !important}
+.appLinkBtn:link,.appLinkBtn:visited,.appLinkBtn:hover,.appLinkBtn:active{background:#01a5da !important;color:#FFF !important;text-decoration:none !important}
+.appLinkBtnIcon{margin-right:5px}.pageContentColumns{display:flex;justify-content:space-between;padding:20px}
+.pageContentRight{text-align:right}.pageContentLeft{flex:1;padding-right:100px}.appInfoBtn,.appSuccessBtn{display:inline-flex !important;justify-content:center;align-items:center}
+.appBtnIcon{font-size:20px;margin-right:5px}.noContentMessageLabel{color:#9c9c9c;margin-left:20px}
+.paymentsTotalRegion{padding:20px;display:flex;justify-content:flex-end;text-align:right}
+.paymentsTotalLabel{font-size:14px;font-weight:bold;color:gray}.paymentsTotalAmount{font-size:35px;font-weight:bold;color:#01a5da;position:relative}
+.paymentRowAmount{text-align:center}.paymentRowAmountLabel{font-size:12px;font-weight:bold}
+.paymentRowAmountValue{font-size:20px;font-weight:bold;color:#18bc9c}.paymentRowIcons{display:flex;align-items:center;font-size:25px}
+.paymentRowIcon{border:1px solid #18bc9c;padding:8px;border-radius:50%;color:#18bc9c;margin-left:10px;cursor:pointer}
+.paymentRowIcon:hover{background:#18bc9c;color:#FFF}.makePaymentClientName,.makePaymentClientId{font-size:25px;font-weight:bold}
+.makePaymentClientLabel{color:#01a5da}.makePaymentPage .pageContentMain{padding:20px}
+.makePaymentHeader{display:flex;justify-content:space-between;margin-bottom:20px;border-bottom:1px solid #ececec;padding-bottom:20px}
+.makePaymentHeaderLeft{flex:1}.makePaymentHeaderRight{flex:1;text-align:right}.makePaymentBottomSection{border-top:1px solid #ececec;margin-top:10px;padding-top:10px}
+.makePaymentAnotherAmountPanel{display:flex;justify-content:space-around;align-items:center}
+.makePaymentCheckbox,.makePaymentCheckboxLabel,.radioOuterLabel{margin:0 !important;padding:0 !important;color:#18bc9c}
+.radioInnerLabel{color:#000;font-weight:bold}.makePaymentAmountSection{text-align:right}
+.makePaymentAmountLabel{color:gray;font-size:14px}.makePaymentAmountValue{color:#01a5da;font-size:20px;font-weight:bold}
+.makePaymentAmountNumber{font-size:25px}.makePaymentCedulaLabel{color:gray}.makePaymentFrequencyLabel{color:#18bc9c;font-weight:bold}
+.makePaymentSectionHeader{display:flex;justify-content:flex-end;align-items:center}
+.breadCrumbDivider{margin:0 10px;color:lightblue}.paymentParentLink{cursor:pointer}
+.paymentParentLink:hover{color:#158bb1}.makePaymentBtnRegion{display:flex;justify-content:flex-end;margin-bottom:20px}
+.makePaymentBtn{flex:.3}.makePaymentRadio{background:#ececec;padding:10px 5px 5px 10px}
+.makePaymentHistoryLastPayment{padding:20px;border:2px solid #01a5da;margin-bottom:20px;color:#01a5da;display:flex;justify-content:space-between;align-items:center}
+.makePaymentHistoryDate{margin:0 20px 0 10px;font-weight:bold}@media only screen and (max-width:480px){.paymentsList .paymentRow{flex-direction:column;text-align:center}
+.paymentsList .paymentRowRight{flex-direction:column;display:block}.paymentsTotalRegion{text-align:center;justify-content:center;margin:50px 0 10px 0}
+.paymentsList .paymentRowAmount{margin-top:20px}.paymentRowIcons .paymentRowIcon:first-child{margin-left:0}
+.paymentRowIcons{justify-content:center;margin-top:20px}.makePaymentHeader{flex-direction:column;text-align:center;justify-content:center;align-items:center}
+.makePaymentHeaderRight{text-align:center;margin-top:30px}.makePaymentBtn{flex:1}
+.makePaymentAnotherAmountPanel{flex-direction:column}}.sideNavWrapper{background:#556f8a;width:280px;height:100%}
+.sideNavWrapper>nav{display:flex;flex-direction:column;justify-content:space-between;height:100%}
+.sideNavTop{margin-top:50px}.sideNavBottom{margin-bottom:20px}.sideNavItemWrapper{padding:15px 20px 15px 40px;display:flex;align-items:center;cursor:pointer;position:relative}
+.sideNavItemWrapper.selected,.sideNavItemWrapper.selected:hover{background:#3d5269}
+.sideNavItemWrapper:hover{background:#4c6682}.sideNavItemWrapper.selected .sideNavItemIcon{color:#3be6c4}
+.sideNavItemWrapper.selected .sideNavTab{display:block}.sideNavItemIcon{color:#c3cee0;font-size:20px}
+.sideNavExpandedIcon{display:inline-block}.sideNavCollapsedIcon{display:none}.sideNavItemLabel{color:#c3cee0;margin-left:20px;display:block}
+.sideNavTab{width:5px;background:#3be6c4;height:100%;position:absolute;right:0;top:0;display:none}
+.sideNavBadge{position:absolute;right:0;top:9px;margin-right:20px;color:#3be6c4;border:1px solid #3be6c4;padding:5px;min-width:32px;border-radius:50%;text-align:center;display:none}
+.sideNavTop>header,.sideNavBottom>header{color:#c3cee0;opacity:.5;font-size:10px;margin-left:30px;margin-bottom:10px;display:block}
+.sideNavSeparator{height:1px;background:#ececec;opacity:.2;margin:30px}@media only screen and (max-width:1024px){.sideNavWrapper{width:60px}
+.sideNavTop>header,.sideNavBottom>header{display:none}.sideNavCollapsedIcon{display:block}
+.sideNavItemLabel,.sideNavExpandedIcon{display:none}.sideNavItemWrapper{padding:15px 20px 15px 17px}
+.sideNavItemIcon{font-size:25px}.sideNavTop{margin-top:0}}.splashScreen{background:#2c3e50;position:absolute;top:0;right:0;bottom:0;left:0;display:flex;justify-content:center;align-items:center;z-index:1000}
+.splashScreenCenter{display:flex;flex-direction:column;align-items:center}.splashProgress{width:80px;margin-top:20px}
+.splashImage{width:150px}

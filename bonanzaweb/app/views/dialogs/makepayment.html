@@ -1,0 +1,20 @@
+<div class="dialogComponent">
+    <div class="dialogOverlay"></div>
+    <div id="{{ DialogName }}" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" (click)="onHideDialog()">&times;</button>
+                <h4 class="modal-title"><b>{{ Title }}</b></h4>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-sm" data-dismiss="modal" (click)="onHideDialog()">Cancelar</button>
+                <button type="button" class="btn btn-success btn-sm">Actualizar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,230 @@
+<div class="pageContainer clientDetailsPage">
+    <header>
+        <span class="headerIcon icon icon-group"></span><span class="paymentParentLink" (click)="backToParent()">Afiliados</span><span class="breadCrumbDivider">/</span><span>Detalles de Afiliado</span>
+    </header>
+    <div class="pageToolbar">
+        <button class="appLinkBtn btn btn-link" (click)="editAfiliado()"><span class="appLinkBtnIcon icon icon-pencil"></span> Editar Afiliado</button>
+    </div>
+    <div class="pageContentMain">
+        <div class="clientDetailsHeader">
+            <div class="clientDetailsHeaderLeft">
+                <div class="clientDetailsClientLabel">Afiliado Primario</div>
+                <div class="clientDetailsClientName">{{ Client?.afiliadoPrimario?.apellido }}, {{ Client?.afiliadoPrimario?.nombre }}</div>
+                <div *ngIf="Client?.afiliadoPrimario?.apodo">({{ Client?.afiliadoPrimario?.apodo }})</div>
+            </div>
+            <div class="clientDetailsHeaderRight">
+                <div class="clientDetailsClientLabel">Cuenta No.</div>
+                <div class="clientDetailsClientId">{{ Client?._id }}</div>
+            </div>
+        </div>
+        
+        <div class="clientDetailsMainSection">
+            <div class="clientDetailsSection">
+                <expander-component>
+                    <expander-title>
+                        Detalles del Afiliado Primario
+                    </expander-title>
+                    <expander-content>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Fecha de Nacimiento</div>
+                                <div class="clientDetailsSectionCellContent">{{ convertDate(Client?.afiliadoPrimario?.fechaDeNacimiento) | date: 'shortDate' }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Miembro Desde</div>
+                                <div class="clientDetailsSectionCellContent">{{ convertDate(Client?.afiliadoPrimario?.miembroDesde) | date: 'shortDate' }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Cedula No.</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoPrimario?.cedula }}</div>
+                            </div>
+                        </div>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Direccion</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoPrimario?.direccion?.calle }},
+                                     {{ Client?.afiliadoPrimario?.direccion?.provincia }}, {{ Client?.afiliadoPrimario?.direccion?.municipio }} {{ Client?.afiliadoPrimario?.direccion?.distrito }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Referencia de Lugar</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoPrimario?.direccion?.referenciaLugar }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Telefonos</div>
+                                <div class="clientDetailsSectionCellContent">
+                                    <div>Casa: {{ Client?.afiliadoPrimario?.telefono?.casa }}</div>
+                                    <div *ngIf="Client?.afiliadoPrimario?.telefono?.celular">Celular: {{ Client?.afiliadoPrimario?.telefono?.celular }}</div>
+                                    <div *ngIf="Client?.afiliadoPrimario?.telefono?.trabajo">Trabajo: {{ Client?.afiliadoPrimario?.telefono?.trabajo }}</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Estado de Cuenta</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.cuenta?.estado }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Tipo de Cuenta</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.cuenta?.tipo | metadata: 'tipo' }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Frecuencia de Pago</div>
+                                <div class="clientDetailsSectionCellContent"><span class="clientDetailsFrequencyLabel">{{ Client?.cuenta?.frecuenciaDePago | metadata: 'frecuencia' }}</span></div>
+                            </div>
+                        </div>
+                    </expander-content>
+                </expander-component>
+            </div>
+            <div class="clientDetailsSection">
+                <expander-component>
+                    <expander-title>
+                        Afiliado Secundario
+                    </expander-title>
+                    <expander-content>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Nombre</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.nombre }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Apellido</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.apellido }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Apodo</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.apodo }}</div>
+                            </div>
+                        </div>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Fecha de Nacimiento</div>
+                                <div class="clientDetailsSectionCellContent">{{ convertDate(Client?.afiliadoSecundario?.fechaDeNacimiento) | date: 'shortDate' }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Parentesco</div>
+                                <div class="clientDetailsSectionCellContent">Hijo</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Cedula No.</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.cedula }}</div>
+                            </div>
+                        </div>
+                        <div class="clientDetailsSectionRow">
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Direccion</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.direccion?.calle }},
+                                     {{ Client?.afiliadoSecundario?.direccion?.provincia }}, {{ Client?.afiliadoSecundario?.direccion?.municipio }} {{ Client?.afiliadoSecundario?.direccion?.distrito }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Referencia de Lugar</div>
+                                <div class="clientDetailsSectionCellContent">{{ Client?.afiliadoSecundario?.direccion?.referenciaLugar }}</div>
+                            </div>
+                            <div class="clientDetailsSectionCell">
+                                <div class="clientDetailsSectionCellHeader">Telefonos</div>
+                                <div class="clientDetailsSectionCellContent">
+                                    <div>Casa: {{ Client?.afiliadoSecundario?.telefono?.casa }}</div>
+                                    <div *ngIf="Client?.afiliadoSecundario?.telefono?.celular">Celular: {{ Client?.afiliadoSecundario?.telefono?.celular }}</div>
+                                    <div *ngIf="Client?.afiliadoSecundario?.telefono?.trabajo">Trabajo: {{ Client?.afiliadoSecundario?.telefono?.trabajo }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </expander-content>
+                </expander-component>
+            </div>
+            <div class="clientDetailsSection">
+                <expander-component>
+                    <expander-title>
+                        Familiares Beneficiados
+                    </expander-title>
+                    <expander-content>
+                        <div class="clientDetailsSectionContentHeader">
+                            <button (click)="onAddRelative()" class="appLinkBtn btn btn-link btn-sm"><span class="appLinkBtnIcon icon icon-plus"></span> Anadir Familiar</button>
+                        </div>
+                        <br/>
+                        <div *ngIf="!Client?.familiaresBeneficiados || Client?.familiaresBeneficiados.length == 0">El afiliado no tiene familiares beneficiados</div>
+                        <table *ngIf="Client?.familiaresBeneficiados && Client?.familiaresBeneficiados.length > 0" class="table table-striped table-hover table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th>Parentesco</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let familiar of Client?.familiaresBeneficiados">
+                                    <td>{{ familiar.nombre }}</td>
+                                    <td>{{ familiar.apellido }}</td>
+                                    <td>{{ familiar.parentesco | metadata: 'parentesco' }}</td>
+                                    <td>
+                                        <div class="clientDetailsListBtns">
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-eye"></span></button>
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-pencil"></span></button>
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-trash-bin"></span></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </expander-content>
+                </expander-component>
+            </div>
+            <div class="clientDetailsSection">
+                <expander-component>
+                    <expander-title>
+                        Actividad de Pago
+                    </expander-title>
+                    <expander-content>
+                        <div class="clientDetailsSectionContentHeader">
+                            <button (click)="onMakePayment()" class="appSuccessBtn btn btn-success btn-sm"><span class="appLinkBtnIcon icon icon-dollar"></span> Hacer Pago</button>
+                        </div>
+                        <br/>
+                        <div *ngIf="Client?.actividadDePago?.pagosPorHacer?.length == 0">El afiliado no tiene pagos por hacer por el momento.</div>
+                        <table *ngIf="Client?.actividadDePago?.pagosPorHacer?.length > 0" class="table table-striped table-hover table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Fecha de Ciclo</th>
+                                    <th>Cantidad Por Pagar</th>
+                                    <th>Frecuencia</th>
+                                    <th>No. de Transacción</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let pagoPorHacer of Client?.actividadDePago?.pagosPorHacer">
+                                    <td>{{ convertDate(pagoPorHacer.fechaDeCiclo) | date: 'shortDate' }}</td>
+                                    <td>RD${{ pagoPorHacer.cantidadPorPagar | number: '1.2' }}</td>
+                                    <td>{{ Client?.cuenta?.frecuenciaDePago | metadata: 'frecuencia' }}</td>
+                                    <td>{{ pagoPorHacer.transactionId }}</td>
+                                    <td>
+                                        <div class="clientDetailsListBtns">
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-eye"></span></button>
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-pencil"></span></button>
+                                            <button class="appLinkBtn clientDetailsListBtn btn btn-link btn-sm"><span class="icon icon-trash-bin"></span></button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </expander-content>
+                </expander-component>
+            </div>
+            <div class="clientDetailsSection">
+                <expander-component>
+                    <expander-title>
+                        Notas
+                    </expander-title>
+                    <expander-content>
+                        No hay notas por el momento.
+                    </expander-content>
+                </expander-component>
+            </div>
+        </div>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+</div>

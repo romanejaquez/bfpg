@@ -1,0 +1,32 @@
+<div class="pageContainer annotationsPage">
+    <header>
+        <span class="headerIcon icon icon-document"></span><span>Anotaciones</span>
+    </header>
+    <div class="pageToolbar">
+        <button class="addClientBtn appLinkBtn btn btn-link" (click)="addAnotationDialog()"><span class="appLinkBtnIcon icon icon-plus"></span> Anadir Nueva Anotacion</button>
+    </div>
+    <div class="pageContentMain">
+        <div class="noContentMessageLabel" *ngIf="!Anotaciones">No hay anotaciones por el momento.</div>
+        <div class="annotationContainer" *ngFor="let annotation of Anotaciones">
+            <div class="annotationInnerContainer">
+                <div class="annotationIconWrapper">
+                    <span class="annotationIcon icon icon-document"></span>
+                </div>
+                <div>
+                    <div>{{ annotation.message }}</div>
+                    <div class="annotationDate">Creada: {{ convertDate(annotation.created) }}</div>
+                </div>
+            </div>
+            <div class="annotationBtns">
+                <button class="annotationDeleteBtn btn btn-danger btn-block" (click)="deleteAnotation(annotation._id)" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Borrar Anotacion"><span class="icon icon-trash-bin"></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="pageLoading" *ngIf="Notifications.RequestInProgress">
+        <div>
+            <div class="pageLoadingLabel">{{ Notifications.RequestMessage }}</div>
+            <img class="pageLoadingProgress" src="imgs/three-dots_green.svg" />
+        </div>
+    </div>
+    <router-outlet></router-outlet>
+</div>
